@@ -1,0 +1,769 @@
+<HTML>
+<HEAD>
+<TITLE>Домашняя страница</TITLE>
+
+<style type="text/css">
+.head_div{
+  text-align: center;
+  background-color: silver;
+}
+.head_div:hover{
+  background-color: red;
+}
+.head_div a {
+  display: block; /* Ссылка как блочный элемент */
+  text-align: center; /* Выравнивание по центру */
+  text-decoration: none; /* Убрать подчеркивание */
+  color: #666; /* Цвет ссылки */
+  font: bold 12pt/30pt sans-serif;
+}
+table {
+  text-align: center;
+  width: 100%;
+}
+.calc_layout {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font: bold 12pt/30pt sans-serif;
+}
+.layoutToCalc {
+  background-color: black;
+  color: lime;
+  text-align: right;
+  width: 100%;
+  height: 100%;
+  font: bold 12pt/30pt system;
+}
+#operToCalc{
+  text-align: center;
+}
+.tab_div{
+  display: none; 
+  border: solid 1px blue;
+}
+.url_cell{
+  text-align: left;
+}
+#calculator_block {
+  position: fixed;
+  display: none; 
+  border: solid 1px #7B5427;
+  top: 20px;
+  left: 200px;
+  width: 220px;
+  height: 250px;
+  z-index: 20;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  border-radius: 8px;
+  background: #fc0;
+  padding: 6px;
+}
+
+</style>
+
+<SCRIPT src="../scripts/date.js">
+</SCRIPT>
+
+<SCRIPT>
+colors = new Array("red","yellow","cyan","fuchsia","lime","#fc0","#abf");
+
+// смена фона ссылки
+function setbackcolor(el, mode){
+  if (mode==1)
+    el.style.backgroundColor=colors[el.name];
+  else  
+    el.style.backgroundColor="silver";
+}
+
+// отображение/скрытие блочного элемента
+function viewdiv(id){
+  var el=document.getElementById(id);
+  if (el.style.display=="block")
+    el.style.display="none";
+  else
+    el.style.display="block";
+}
+
+function change_visibility (block_4_close, block_4_open) {
+  document.getElementById(block_4_close).style.display='none';
+  document.getElementById(block_4_open).style.display='';
+}
+// с использованием библиотеки jQuery
+function change_visibility2 (block_4_close, block_4_open) {
+  $(document).ready(function(){
+     $('#'+block_4_close).css('display','none');
+     $('#'+block_4_open).css('display','');
+     return false;
+  });
+}
+
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------->
+<header style="height: 40px; width: 100%; padding: 0;">
+<div id="datetime" style="position: relative; float: right; top: 10; right: 10; ">Сегодня...</div>
+</header>
+
+<!--    Конвертер единиц (болванка)
+<div class="vk_c _cy obcontainer card-section">
+
+<div class="_frf"> 
+  <select class="_nif _Ohf iTbk9tdPeYks-trqxvH0pmCk" jsaction="change:r.3r2U78ZXCIY" data-rtid="iTbk9tdPeYks" jsl="$x 1;" data-ved="0ahUKEwje9s6kk-vNAhWIPZoKHcQeD7IQ6WoIGzAA"> 
+    <option value="Время">Время</option>
+    <option value="Давление">Давление</option>
+    <option selected="selected" value="Длина">Длина</option>
+    <option value="Масса">Масса</option>
+    <option value="Объем">Объем</option>
+    <option value="Объем информации">Объем информации</option>
+    <option value="Плоский угол">Плоский угол</option>
+    <option value="Площадь">Площадь</option>
+    <option value="Расход топлива">Расход топлива</option>
+    <option value="Скорость">Скорость</option>
+    <option value="Скорость Передачи Данных">Скорость Передачи Данных</option>
+    <option value="Температура">Температура</option>
+    <option value="Частота">Частота</option>
+    <option value="Энергия">Энергия</option>
+  </select> 
+</div> 
+
+<div class="_cif" id="_Aif"> 
+<input class="_eif iTbk9tdPeYks-TAgAjI3bJNo" value="1" jsaction="change:r.EQNHKrw0qdA;keyup:r.EQNHKrw0qdA;r.JnbD_-w_xe0" data-rtid="iTbk9tdPeYks" jsl="$x 2;" data-ved="0ahUKEwje9s6kk-vNAhWIPZoKHcQeD7IQ5WoIHDAA"> 
+
+<select class="_dif _Ohf iTbk9tdPeYks-y69YkR-bRoA" id="_Bif" jsaction="change:r.tDOMoafrm4E" data-rtid="iTbk9tdPeYks" jsl="$x 3;" data-ved="0ahUKEwje9s6kk-vNAhWIPZoKHcQeD7IQ5moIHTAA">  
+<option text="Километр">Километр</option>
+<option text="Метр">Метр</option>
+<option selected="selected" text="Сантиметр">Сантиметр</option>
+<option text="Миллиметр">Миллиметр</option>
+<option text="Микрометр">Микрометр</option>
+<option text="Нанометр">Нанометр</option>
+<option text="Миля">Миля</option><option text="Ярд">Ярд</option>
+<option text="Фут">Фут</option>
+<option text="Дюйм">Дюйм</option>
+<option text="Морская миля">Морская миля</option>  
+</select> 
+</div> 
+
+<div class="_oif">=</div>
+
+<div class="_cif" id="_Cif"> 
+<input class="_eif iTbk9tdPeYks-7Ob2ZtRDv2s" value="5,38058" jsaction="change:r.Y8jfekOjBAk;keyup:r.Y8jfekOjBAk;r.GsMrmfckh-M" data-rtid="iTbk9tdPeYks" jsl="$x 4;" data-ved="0ahUKEwje9s6kk-vNAhWIPZoKHcQeD7IQ52oIHjAA"> 
+<select class="_dif _Ohf iTbk9tdPeYks-EXIkszwxM2g" jsaction="change:r.xd0JMVj7UXs" data-rtid="iTbk9tdPeYks" jsl="$x 5;" data-ved="0ahUKEwje9s6kk-vNAhWIPZoKHcQeD7IQ6GoIHzAA">  
+<option text="Километр">Километр</option>
+<option text="Метр">Метр</option>
+<option text="Сантиметр">Сантиметр</option>
+<option text="Миллиметр">Миллиметр</option>
+<option text="Микрометр">Микрометр</option>
+<option text="Нанометр">Нанометр</option>
+<option text="Миля">Миля</option>
+<option text="Ярд">Ярд</option>
+<option selected="selected" text="Фут">Фут</option>
+<option text="Дюйм">Дюйм</option>
+<option text="Морская миля">Морская миля</option>  
+</select> 
+</div>
+
+</div>
+-->
+
+<div style="text-align: center; width: 100%; padding: 10px;" >
+<form name="calculator" >
+<input type="button" value="Калькулятор" onClick="openCalcForm()">
+<br>
+<input type="textfield" name="expr" value="" onChange="document.calculator.res.value=eval(document.calculator.expr.value)">
+<input type="button" value="=" onClick="document.calculator.res.value=eval(document.calculator.expr.value)">
+<input type="textfield" name="res" value="" >
+</form>
+</div>
+
+<DIV id="calculator_block" >
+  <!--<FORM name="form1" style="position: absolute; left: 6px;" >-->
+    <table class="calc_layout" cellspacing="0" cellpadding="0">
+      <tr>
+         <td width="16%"></td> <td width="16%"></td> <td width="16%"></td> <td width="16%"></td> <td width="16%"></td> <td width="16%"></td>
+      <tr>
+         <td colspan="2"><input type="textfield" class="layoutToCalc" id="argToCalc" value="" ></td>
+         <td colspan="2"><input type="text" class="layoutToCalc" id="operToCalc" value="" > </td>
+         <td colspan="2"><input type="textfield" class="layoutToCalc" id="exprToCalc" value="" onKeyUp="handleKeyDown(event.keyCode);" > </td>
+      <tr>
+        <td><input type="button" class="calc_layout" value="1" onClick="addVal(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="2" onClick="addVal(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="3" onClick="addVal(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="/" onClick="calcOper(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="&radic;" onClick="calcFunc(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="C" onClick="clearCalc()"></td>
+      <tr>
+        <td><input type="button" class="calc_layout" value="4" onClick="addVal(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="5" onClick="addVal(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="6" onClick="addVal(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="*" onClick="calcOper(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="^" onClick="calcOper(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="&pi;" onClick="addVal(Math.PI)"></td>
+      <tr>
+        <td><input type="button" class="calc_layout" value="7" onClick="addVal(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="8" onClick="addVal(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="9" onClick="addVal(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="-" onClick="calcOper(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="1/x" onClick="calcFunc(this.value)"></td>
+        <td rowspan="2"><input type="button" class="calc_layout" value="=" onClick="calcFunc('=')"></td>
+      <tr>
+        <td colspan="2"><input type="button" class="calc_layout" value="0" onClick="addVal(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="." onClick="addVal(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="+" onClick="calcOper(this.value)"></td>
+        <td><input type="button" class="calc_layout" value="&#177" onClick="calcFunc(this.value)"></td>
+    </table>
+  <!--</FORM>-->
+</DIV>
+
+
+<div style="text-align: center; width: 100%; padding: 10px;">
+<div style="font: bold 24pt/48pt sans-serif;">
+<span style="color:#48f">G</span><span style="color:#f48">o</span><span style="color:#eb0">o</span><span style="color:#48f">g</span><span style="color:#0a4">l</span><span style="color:#f48">e</span>
+</div>
+<input style="padding: 10px; border: solid 1px #48f; font-size: 12pt;" id="search_bar" type="text" size="60" onchange="if (this.value!='') window.open('https://www.google.ru/?gws_rd=ssl#newwindow=1&q='+this.value,'_blank')">
+</div>
+
+<div style="text-align: center; width: 100%; padding: 10px;">
+<div style="font: bold 24pt/48pt sans-serif;">Поиск Mail.ru</div>
+<input style="padding: 10px; border: solid 1px #48f; font-size: 12pt;" id="search_bar" type="text" size="60" onchange="if (this.value!='') window.open('https://go.mail.ru/search?fr=main&sbmt=1526626934251&frm=main&q='+this.value+'&=','_blank')">
+</div>
+
+<div style="text-align: center; width: 100%; padding: 10px;">
+<div style="font: bold 24pt/48pt Impact;">
+<span style="color:#c13">ABBYY</span><span style="color:black"> Lingvo</span>
+</div>
+<input style="padding: 10px; border: solid 1px silver; font-size: 12pt;" id="search_bar" type="text" size="60" onchange="if (this.value!='') window.open('https://www.lingvolive.com/en-us/translate/en-ru/'+this.value,'_blank')">
+</div>
+
+<br>
+<div class="head_div">
+<a name="0" href="javascript:void(0);" onclick="viewdiv('mydiv')">
+Финансы и услуги
+</a>
+</div>
+
+<DIV id="mydiv" class="tab_div">
+<table border="1" cellspacing="0" cellpadding="4" >
+<tr>
+<th>Интернет-банкинг</th>
+<td class="url_cell">
+<a href="https://online.mtsbank.ru/webmvc/clientLogin" target="_blanc">МТС Банк</a>&emsp;&bull;&ensp;
+<a href="https://online.sberbank.ru/CSAFront/index.do" target="_blanc">Сбербанк Онлайн</a>&emsp;&bull;&ensp;
+<a href="https://online.openbank.ru/logon" target="_blanc">Открытие Online</a>&emsp;&bull;&ensp;
+<a href="https://lks.domclick.ru" target="_blanc">ДомКлик от Сбербанка</a>&emsp;&bull;&ensp;
+</td>
+<tr>
+<th>Личные кабинеты</th>
+<td class="url_cell">
+<a href="https://pay.erkcufa.ru/Login.aspx?ReturnUrl=%2fdefault.aspx&AspxAutoDetectCookieSupport=1" target="_blanc">ЕРКЦ</a>&emsp;&bull;&ensp;
+<a href="https://lkk.bashesk.ru/auth" target="_blanc">Электроэнергия ЭСКБ Русгидро</a>&emsp;&bull;&ensp;
+<a href="https://lkpe.bashrts.bgkrb.ru/Account/Login" target="_blanc">БашРТС</a>&emsp;&bull;&ensp;
+<a href="https://lk.ufa.zelenaya.net/login" target="_blanc">Интернет Зеленая точка</a>&emsp;&bull;&ensp;
+<a href="https://lk.ssl.mts.ru/" target="_blanc">МТС Личный кабинет</a>&emsp;&bull;&ensp;
+<a href="https://bonus.ssl.mts.ru/#!/" target="_blanc">МТС Бонус</a>&emsp;&bull;&ensp;
+<a href="https://my.perekrestok.ru/login" target="_blanc">Клуб Перекресток</a>&emsp;&bull;&ensp;
+<a href="https://customer.licard.ru/#/auth/login" target="_blanc">Клуб Лукойл</a>&emsp;&bull;&ensp;
+<a href="https://www.gosuslugi.ru/" target="_blanc">Единый портал госуслуг</a>&emsp;&bull;&ensp;
+<a href="https://lkfl2.nalog.ru/lkfl/login" target="_blanc">ЛК налогоплательщика</a>&emsp;&bull;&ensp;
+<a href="https://my.5ka.ru/login" target="_blanc">Пятерочка</a>&emsp;&bull;&ensp;
+<a href="https://lk.npfe.ru/ru/index.php" target="_blanc">НПФ Электроэнергетики</a>
+</td>
+<tr>
+<th>Банки</th>
+<td class="url_cell">
+<a href="http://www.banki.ru/" target="_blanc">Портал Банки.ру</a>&emsp;&bull;&ensp;
+<a href="http://analizbankov.ru/bank.php" target="_blanc">Анализ состояния банков</a>&emsp;&bull;&ensp;
+<a href="http://kuap.ru/" target="_blanc">КУАП - Финансовый анализ банков</a>&emsp;&bull;&ensp;
+<a href="http://www.forbes.ru/rating/315145-kredit-doveriya-reiting-nadezhnosti-bankov" target="_blanc">Рейтинг банков от Форбс 2016</a> 
+</td>
+<tr>
+<th>Инфо</th>
+<td class="url_cell">
+<a href="http://hranidengi.ru/" target="_blanc">Блог практичного инвестора</a>&emsp;&bull;&ensp;
+</td>
+</table>
+</DIV>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------->
+<br>
+<div class="head_div">
+<a name="1" href="javascript:void(0);" onclick="viewdiv('mydiv2');" onmouseover="setbackcolor(this,1)" onmouseout="setbackcolor(this,0)">
+Спорт
+</a>
+
+</div>
+<DIV id="mydiv2" class="tab_div">
+<table border="1" cellspacing="0" cellpadding="4" >
+<tr>
+<th>Лыжи</th>
+<td class="url_cell">
+<a href="http://www.skisport.ru/" target="_blanc">Лыжный спорт</a>
+</td>
+<tr>
+<th>Шахматы</th>
+<td class="url_cell">
+<a href="https://www.chess.com/ru" target="_blanc">Chess.com</a>&emsp;&bull;&ensp;
+<a href="https://www.chess.com/ru/forum/category/daily-puzzles" target="_blanc">Daily Chess Puzzles</a>&emsp;&bull;&ensp;
+<a href="https://www.chess.com/play/computer" target="_blanc">Игра с компьютером</a>
+</td>
+<tr>
+<th>Футбол</th>
+<td class="url_cell">
+<a href="http://bobsoccer.ru/news/" target="_blanc">Портал BobSoccer</a>&emsp;&bull;&ensp;
+<a href="https://prosm.club/" target="_blanc">Все о Спартаке</a>&emsp;&bull;&ensp;
+<a href="https://www.soccer.ru/blogs/SpaM" target="_blanc">Портал SOCCER.RU блог «Спартаком» единым</a>&emsp;&bull;&ensp;
+<a href="http://sport-stream.ru/" target="_blanc">Live трансляции</a>&emsp;&bull;&ensp;
+<a href="https://livesport.ws/live-football" target="_blanc">Футбол он-лайн трансляции</a>&emsp;&bull;&ensp;
+<a href="http://regista.one/" target="_blanc">Реджиста.Читаем игру</a>&emsp;&bull;&ensp;
+<a href="https://counterpress.ru/" target="_blanc">Контрпресс</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/user/FCSMofficial" target="_blanc">YouTube Спартак</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UCj49b9QYnEu_oqy-1HyXG8A" target="_blanc">YouTube Александр Бубнов</a>&emsp;&bull;&ensp;
+</td>
+<tr>
+<th>Формула 1</th>
+<td class="url_cell">
+<a href="https://www.f1-portal.ru/" target="_blanc">F1 Portal</a>&emsp;&bull;&ensp;
+<a href="http://www.f1news.ru/" target="_blanc">F1 news.ru</a>&emsp;&bull;&ensp;
+<a href="http://www.f1-world.ru/" target="_blanc">Мир Формулы 1</a>&emsp;&bull;&ensp;
+<a href="http://f1report.ru/" target="_blanc">F1Report.ru</a>&emsp;&bull;&ensp;
+<a href="http://www.sports.ru/automoto/f1/" target="_blanc">Спортс.Ру Формула-1</a>
+</td>
+<tr>
+<th>Новости</th>
+<td class="url_cell">
+<a href="https://sport24.ru/" target="_blanc">Спорт - 24</a>&emsp;&bull;&ensp;
+<a href="http://news.rambler.ru/sport/" target="_blanc">Спорт - Рамблер.Новости</a>&emsp;&bull;&ensp;
+<a href="http://www.gazeta.ru/sport/" target="_blanc">Газета.Ру</a>&emsp;&bull;&ensp;
+<a href="http://lenta.ru/rubrics/sport" target="_blanc">Лента.Ру</a>&emsp;&bull;&ensp;
+<a href="http://www.sport-express.ru/" target="_blanc">СПОРТ-ЭКСПРЕСС</a>&emsp;&bull;&ensp;
+<a href="http://stadium.ru/" target="_blanc">Российский Стадион</a>&emsp;&bull;&ensp;
+<a href="http://championat.com/" target="_blanc">Championat</a>&emsp;&bull;&ensp;
+<a href="http://www.sports.ru/" target="_blanc">Спортс.Ру</a>
+</td>
+</table>
+</DIV>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------->
+<br>
+<div class="head_div">
+<a name="2" href="javascript:void(0);" onclick="viewdiv('mydiv3');" onmouseover="setbackcolor(this,1)" onmouseout="setbackcolor(this,0)">
+Разное
+</a>
+</div>
+
+<DIV id="mydiv3" class="tab_div">
+<table border="1" cellspacing="0" cellpadding="4" >
+<tr>
+<th>Погода</th>
+<td class="url_cell">
+<a href="http://www.foreca.com/Russia/Ufa" target="_blanc">Foreca.com Ufa</a>&emsp;&bull;&ensp;
+<a href="https://www.bgkrb.ru/consumers/weather.php" target="_blanc">БашРТС On-line погода по Уфe</a>&emsp;&bull;&ensp;
+<a href="http://termoufa.ru/" target="_blanc">Термометр Уфы</a>&emsp;&bull;&ensp;
+<a href="http://rp5.ru/8667/ru" target="_blanc">RP5 - Погода в Уфе</a>&emsp;&bull;&ensp;
+<a href="http://www.gismeteo.ru/city/daily/4588/" target="_blanc">ГИС Метео - Уфа</a>
+</td>
+<tr>
+<th>Почта</th>
+<td class="url_cell">
+<a href="https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&continue=https://drive.google.com/drive/&followup=https://drive.google.com/drive/&emr=1" target="_blanc">Google диск</a>&emsp;&bull;&ensp;
+<a href="https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://photos.google.com/login&followup=https://photos.google.com/login" target="_blanc">Google Фото</a>&emsp;&bull;&ensp;
+<a href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1" target="_blanc">Почта GMail</a>&emsp;&bull;&ensp;
+<a href="https://e.mail.ru/cgi-bin/login" target="_blanc">Почта Mail.ru</a>
+</td>
+<tr>
+<th>Карты</th>
+<td class="url_cell">
+<a href="http://2gis.ru/ufa/zoom/11" target="_blanc">2ГИС - Уфа</a>&emsp;&bull;&ensp;
+<a href="http://maps.ufanet.ru/ufa#" target="_blanc">Веб-камеры - Уфа</a>
+</td>
+<tr>
+<th>TV программа</th>
+<td class="url_cell">
+<a href="https://tv.yandex.ru/172?grid=all&period=now" target="_blanc">ТВ Яндекс - Уфа</a>
+</td>
+<tr>
+<th>Автомобили</th>
+<td class="url_cell">
+<a href="http://lanos-club.ru/forum/lofiversion/index.php/" target="_blanc">Форум Lanos/Sens/Chance клуба</a>&emsp;&bull;&ensp;
+<a href="https://inform.auto-parts.org.ua/%D0%BF%D1%80%D0%B5%D0%B4%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D0%B8-%D0%B8-%D1%80%D0%B5%D0%BB%D0%B5/" target="_blanc">Ланос - предохранители и реле</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/l/454871534897464185/" target="_blanc">Ланос - размещение разъемов</a>&emsp;&bull;&ensp;
+<a href="https://www.automobiledimension.com/" target="_blanc">Габариты и фото автомобилей</a>&emsp;&bull;&ensp;
+<a href="https://carpedia.club/articles/Chevrolet/Lanos" target="_blanc">Carpedia - Chevrolet Lanos - Статьи</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UC8S11pZyXwoGH_hMI_9P4cw" target="_blanc">Андрей Смирнов - Обзоры шин</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/l/471182515017613348/" target="_blanc">Глобальное ТО Lanos 10 лет (ГРМ и т.п.)</a>&emsp;&bull;&ensp;
+<a href="http://www.avtorem.info/stati/daewoo" target="_blanc">Ремонт автомобилей Daewoo своими руками</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/r/chevrolet/lanos/492820/" target="_blanc">Chevrolet Lanos Парти3ан</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/r/chevrolet/4899916394579123182/" target="_blanc">Chevrolet Lanos Black Edition</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/r/daewoo/4053239664633480167/logbook/?page=1#pager" target="_blanc">Daewoo Lanos › Бортжурнал</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/users/zatoichi1463/#blog" target="_blanc">За Правду: Блог о запчастях</a>&emsp;&bull;&ensp;
+</td>
+<tr>
+<th>Ремонт</th>
+<td class="url_cell">
+<a href="https://www.youtube.com/channel/UCC-_M8rGtIII1jrUodL8sGw" target="_blanc">Ремонт и Отделка Youtube</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UCMb3YscxDOo7rgJ-AvrCXdw" target="_blanc">MY GALAXY Своими руками Youtube</a>&emsp;&bull;&ensp;
+</td>
+<tr>
+<th>Полезные ссылки</th>
+<td class="url_cell">
+<a href="https://mcgrp.ru/" target="_blanc">Инструкции по эксплуатации - Макгруп</a>&emsp;&bull;&ensp;
+<a href="https://kinofakt.blogspot.com/" target="_blanc">Кино - факты и ляпы</a>&emsp;&bull;&ensp;
+<a href="http://rutracker.org/" target="_blanc">Торрент Rutracker.org</a>&emsp;&bull;&ensp;
+<a href="http://filmpotok.ru/new-films/2028.html" target="_blanc">Торрент FilmPotok.RU</a>&emsp;&bull;&ensp;
+<a href="http://filmitorrent.org/" target="_blanc">Торрент фильмы</a>&emsp;&bull;&ensp;
+<a href="http://cinematext.ru/" target="_blanc">Тексты фильмов</a>&emsp;&bull;&ensp;
+<a href="https://givemp3.com/" target="_blanc">Скачать музыку бесплатно</a>&emsp;&bull;&ensp;
+<a href="https://sefon.me/" target="_blanc">Музыкальный портал Sefon.me</a>&emsp;&bull;&ensp;
+<a href="https://mp3ringtony.ru/besplatnye_ringtony" target="_blanc">Бесплатные рингтоны</a>&emsp;&bull;&ensp;
+<a href="http://www.zabaznov.ru/strauss/muz/index2.htm" target="_blanc">Произведения Иоганна Штрауса (сына)</a>&emsp;&bull;&ensp;
+<a href="http://torrent-baza.net/filmy/" target="_blanc">Торрент новые фильмы</a>&emsp;&bull;&ensp;
+<a href="http://www.popmech.ru/" target="_blanc">Популярная механика</a>&emsp;&bull;&ensp;
+<a href="http://russianfood.com/recipes/" target="_blanc">Рецепты на RussianFood</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UC9oPSmSF4Jc23AQNwuiFbqA" target="_blanc">Твоя идея ТВ</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UCyirmMGvGxX8T4jK7CRCZhA" target="_blanc">НОРМ ОБЗОР</a>&emsp;&bull;&ensp;
+<a href="https://www.gazeta.ru/comments/column/mironova/" target="_blanc">Анастасия Миронова</a>&emsp;&bull;&ensp;
+<a href="https://www.novayagazeta.ru/authors/61" target="_blanc">Алексей Поликовский</a>&emsp;&bull;&ensp;
+<a href="http://m.kino-teatr.ru/search/" target="_blanc">Кино театр</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/playlist?list=PLPQMS4LWmn9MGchtzO3DfNT--CaACFaVJ" target="_blanc">Тестирование NiMH, NiZn аккумуляторов</a>&emsp;&bull;&ensp;
+</td>
+<tr>
+<th>Политика</th>
+<td class="url_cell">
+<a href="http://vassermans.ru/" target="_blanc">Вассерман</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UCdY2JiM8GgQAxxchaz-zeEQ" target="_blanc">Хроники Армагеддона</a>&emsp;&bull;&ensp;
+<a href="http://izvestia.ru/search?search=%D0%90%D0%BD%D1%82%D0%BE%D0%BD+%D0%A5%D0%B0%D1%89%D0%B5%D0%BD%D0%BA%D0%BE" target="_blanc">Антон Хащенко</a>&emsp;&bull;&ensp;
+<a href="http://izvestia.ru/search?search=%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9+%D0%9C%D0%B0%D0%BD%D0%BE%D0%B9%D0%BB%D0%BE" target="_blanc">Андрей Манойло</a>&emsp;&bull;&ensp;
+<a href="http://ren.tv/blog/84946" target="_blanc">Дмитрий Чистилин</a>&emsp;&bull;&ensp;
+<a href="http://izvestia.ru/search?search=%D0%A0%D0%BE%D1%81%D1%82%D0%B8%D1%81%D0%BB%D0%B0%D0%B2+%D0%98%D1%89%D0%B5%D0%BD%D0%BA%D0%BE" target="_blanc">Ростислав Ищенко</a>&emsp;&bull;&ensp;
+<a href="http://ren.tv/blog/4615" target="_blanc">Андрей Добров</a>&emsp;&bull;&ensp;
+<a href="https://ria.ru/authors/danilov/" target="_blanc">Иван Данилов, автор блога Crimson Alter</a>&emsp;&bull;&ensp;
+<a href="http://www.gazeta.ru/comments/column/lukyanov/" target="_blanc">Федор Лукьянов</a>
+</td>
+</table>
+</DIV>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------->
+<br>
+<div class="head_div">
+<a name="3" href="javascript:void(0);" onclick="viewdiv('mydiv4');" onmouseover="setbackcolor(this,1)" onmouseout="setbackcolor(this,0)">
+Магазины
+</a>
+</div>
+<DIV id="mydiv4" class="tab_div">
+<table border="1" cellspacing="0" cellpadding="4" >
+<tr>
+<th>Авто</th>
+<td class="url_cell">
+<a href="http://евроавто.рф/parts/chevrolet/lanos-2004-2010/" target="_blanc">ЕвроАвто - б/у з/ч Lanos</a>&emsp;&bull;&ensp;
+<a href="http://www.autodoc.ru/" target="_blanc">Autodoc.ru - автозапчасти</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/l/484311233609073224/?page=1#comments" target="_blanc">Autodoc.ru - коды поставщиков</a>&emsp;&bull;&ensp;
+<a href="http://ufa.vseinstrumenti.ru/?gclid=CJnGnrDnodYCFVnPsgod5HUBQQ" target="_blanc">ВсеИнструменты.Ру</a>&emsp;&bull;&ensp;
+<a href="http://www.autokorufa.ru/" target="_blanc">АвтоКор</a>&emsp;&bull;&ensp;
+<a href="http://zapchasti-ufa.ru/content/view/36/67/" target="_blanc">АвтоДисконт</a>&emsp;&bull;&ensp;
+<a href="https://auto.ru/cars/evaluation/?from=main" target="_blanc">Оценка автомобиля Auto.ru</a>&emsp;&bull;&ensp;
+<a href="https://multigo.ru/benzin/54.7363580;55.9908150/8" target="_blanc">Поиск АЗС</a>&emsp;&bull;&ensp;
+</td>
+<tr>
+<th>Аптеки</th>
+<td class="url_cell">
+<a href="https://apteka.ru/" target="_blanc">сервис Аптека.ру</a>&emsp;&bull;&ensp;
+<a href="http://ufa.pharmacevtika.ru/" target="_blanc">Поиск лекарств в аптеках Уфы</a>
+</td>
+<tr>
+<th>Электроника.Бытовая техника</th>
+<td class="url_cell">
+<a href="https://technopoint.ru/" target="_blanc">DNS Технопоинт</a>&emsp;&bull;&ensp;
+<a href="https://www.computermarket.ru/main/catalog/catid/default.aspx" target="_blanc">КомпьютерМаркет</a>&emsp;&bull;&ensp;
+<a href="http://enecrosse.ru/" target="_blanc">Интернет-магазин батареек и ЗУ - EneCrosse.ru</a>&emsp;&bull;&ensp;
+<a href="https://ufa.rbt.ru/?gclid=EAIaIQobChMIl9qCweCR3AIVCGQZCh04WQxOEAAYASAAEgIEwPD_BwE&region=16&utm_referrer=" target="_blanc">RBT</a>&emsp;&bull;&ensp;
+<a href="http://ufa.e96.ru/" target="_blanc">E96.RU</a>&emsp;&bull;&ensp;
+<a href="https://www.onlinetrade.ru/" target="_blanc">ОНЛАЙН Трейд</a>&emsp;&bull;&ensp;
+<a href="https://www.citilink.ru/" target="_blanc">Ситилинк</a>&emsp;&bull;&ensp;
+<a href="http://gc-progress.com/" target="_blanc">Прогресс</a>&emsp;&bull;&ensp;
+<a href="https://elkomp.ru/" target="_blanc">Мир электроники</a>&emsp;&bull;&ensp;
+<a href="http://electronica.bashel.ru/" target="_blanc">Электроника</a>&emsp;&bull;&ensp;
+<a href="https://www.chipdip.ru/shops/ufa-mendeleyeva-145" target="_blanc">ЧИП и ДИП - интернет-магазин радиодеталей, приборов и электронных компонентов</a>&emsp;&bull;&ensp;
+<a href="http://ufa.mvideo.ru/?reff=google_cpc_rim_image_name_priority1_ufa&gclid=CJix1N3xjrwCFcFa3godR2AAEw" target="_blanc">М-Видео</a>&emsp;&bull;&ensp;
+<a href="http://www.technonet.ru/" target="_blanc">ТЕХНО</a>&emsp;&bull;&ensp;
+<a href="http://www.fotosklad.ru/catalog/" target="_blanc">Фотосклад</a>
+</td>
+<tr>
+<th>Компьютерные</th>
+<td class="url_cell">
+<a href="http://www.dns-shop.ru/" target="_blanc">DNS Уфа</a>&emsp;&bull;&ensp;
+<a href="http://fvd.ru/" target="_blanc">Форте-ВД</a>&emsp;&bull;&ensp;
+<a href="http://www.fermo.ru/#" target="_blanc">ФЕРМО</a>
+</td>
+<tr>
+<th>Спорттовары</th>
+<td class="url_cell">
+<a href="http://www.sportmaster.ru/?nomobile=1&gclid=CI3g_9vv7MsCFYHVcgodU18BaA" target="_blanc">СпортМастер - Уфа</a>&emsp;&bull;&ensp;
+<a href="http://www.championnet.ru/" target="_blanc">Чемпион</a>&emsp;&bull;&ensp;
+<a href="http://www.luchski.ru/" target="_blanc">Луч (Ект.)</a>
+</td>
+<tr>
+<th>Стройматериалы и ремонт</th>
+<td class="url_cell">
+<a href="https://ufa.leroymerlin.ru/" target="_blanc">Leroy Merlin - Уфа</a>&emsp;&bull;&ensp;
+<a href="https://ufa.stroylandiya.ru/" target="_blanc">Стройландия</a>&emsp;&bull;&ensp;
+<a href="https://ufa.esmag.ru/?geocity=%D0%A3%D1%84%D0%B0&city_confirm=1" target="_blanc">Сантехника ESMAG - Уфа</a>&emsp;&bull;&ensp;
+<a href="https://santehgrad.com/" target="_blanc">Сантехград - Уфа</a>&emsp;&bull;&ensp;
+<a href="https://лесоптторгуфа.рф/catalog/" target="_blanc">ЛесОптТорг</a>&emsp;&bull;&ensp;
+<a href="https://yadachnik.ru/" target="_blanc">Дачник</a>&emsp;&bull;&ensp;
+<a href="http://www.ok-stroy.ru/" target="_blanc">ОК-Стройматериалы</a>&emsp;&bull;&ensp;
+<a href="http://ufa-les.ru/" target="_blanc">УфаСтройСнаб - пиломатериалы</a>&emsp;&bull;&ensp;
+<a href="http://bls-ufa.ru/" target="_blanc">БашЛесСтрой - пиломатериалы</a>&emsp;&bull;&ensp;
+<a href="http://www.skladmagazin102.ru/" target="_blanc">АЙРОНСТРОЙ Уфа</a>&emsp;&bull;&ensp;
+<a href="http://profnastil-rb.ru/lp/shtaketnik.php" target="_blanc">Профнастил, Сайдинг, Евроштакетник</a>&emsp;&bull;&ensp;
+</td>
+<tr>
+<th>Мебель и др.</th>
+<td class="url_cell">
+<a href="https://www.techport.ru/" target="_blanc">TechPort - Интернет-гипермаркет выгодных покупок</a>&emsp;&bull;&ensp;
+</td>
+<tr>
+<th>Интернет</th>
+<td class="url_cell">
+<a href="https://www.avito.ru/" target="_blanc">Avito</a>&emsp;&bull;&ensp;
+<a href="https://login.aliexpress.com/?returnUrl=https%3A%2F%2Ftrade.aliexpress.com%2ForderList.htm%3Fspm%3Da2g0o.home.01010.4.74a72a45OGhMbk%26tsp%3D1555304107902" target="_blanc">AliExpress</a>&emsp;&bull;&ensp;
+<a href="https://www.pochta.ru/TRACKING" target="_blanc">Отслеживание посылки - Почта России</a>&emsp;&bull;&ensp;
+<a href="http://hvastik.com/h2/proverit-prodavca-aliexpress" target="_blanc">Проверка продавца на Aliexpress</a>&emsp;&bull;&ensp;
+<a href="http://www.alimonitor.ru/" target="_blanc">Поиск отзывов о продавцах и товарах на Aliexpress</a>&emsp;&bull;&ensp;
+<a href="https://kazanexpress.ru/" target="_blanc">KazanExpress</a>&emsp;&bull;&ensp;
+<a href="https://www.ozon.ru/my/orderlist/?rnd=list" target="_blanc">OZON.ru</a>&emsp;&bull;&ensp;
+<a href="https://my-shop.ru/" target="_blanc">MyShop</a>&emsp;&bull;&ensp;
+<a href="https://susiman.ru/" target="_blanc">Магазин «Сушиман»</a>&emsp;&bull;&ensp;
+</td>
+</table>
+</DIV>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------->
+<br>
+<div class="head_div">
+<a name="4" href="javascript:void(0);" onclick="viewdiv('mydiv5');" onmouseover="setbackcolor(this,1)" onmouseout="setbackcolor(this,0)">
+Программирование
+</a>
+</div>
+
+<DIV id="mydiv5" class="tab_div">
+<table border="1" cellspacing="0" cellpadding="4" >
+<tr>
+<th>Базы данных</th>
+<td class="url_cell">
+<a href="http://www.sqlite.org/lang.html" target="_blanc">SQLite</a>&emsp;&bull;&ensp;
+<a href="http://www.firststeps.ru/sql/oracle/oracle1.html" target="_blanc">Oracle FirstSteps</a>&emsp;&bull;&ensp;
+</td>
+<tr>
+<th>Oracle</th>
+<td class="url_cell">
+<a href="http://localhost:8080/apex" target="_blanc">Oracle XE admin page</a>&emsp;&bull;&ensp;
+<a href="http://oraclestart.blogspot.ru/" target="_blanc">Оракл для начинающих</a>&emsp;&bull;&ensp;
+<a href="https://iusoltsev.wordpress.com/profile/individual-sql-and-cbo/cbo-hints/" target="_blanc">Подсказки Oracle Hints</a>&emsp;&bull;&ensp;
+<a href="http://apps-oracle.ru/regular_expression-2/" target="_blanc">Регулярные выражения в Oracle</a>&emsp;&bull;&ensp;
+<a href="http://www.intuit.ru/studies/courses/537/393/info" target="_blanc">Разработка Web-приложений в Oracle Forms: НОУ ИНТУИТ</a>&emsp;&bull;&ensp;
+<a href="http://subscribe.ru/catalog/industry.comp.oracle" target="_blanc">Рассылка по Oracle Forms, Reports</a>&emsp;&bull;&ensp;
+<a href="http://subscribe.ru/catalog/industry.comp.oracle" target="_blanc" target="_blanc">Oracle Docs - Work with the Report Layout</a>&emsp;&bull;&ensp; 
+<a href="https://www.codecrete.net/UnwrapIt/" target="_blanc" target="_blanc">Unwrap Oracle code</a>&emsp;&bull;&ensp; 
+</td>
+<tr>
+<th>Desktop</th>
+<td class="url_cell">
+<a href="http://cppstudio.com/cat/274/" target="_blanc">Язык программирования С++</a>&emsp;&bull;&ensp;
+<a href="http://www.cplusplus.com/" target="_blanc">С++ Reference, Tutorials</a>&emsp;&bull;&ensp;
+<a href="http://qaru.site/questions/13923/how-to-determine-cpu-and-memory-consumption-from-inside-a-process" target="_blanc">С++ Потребление памяти м ЦП приложением</a>&emsp;&bull;&ensp;
+<a href="http://doc.crossplatform.ru/" target="_blanc">Qt документация</a>&emsp;&bull;&ensp;
+<a href="http://www.cyberforum.ru/qt/thread450074.html#post2511855" target="_blanc">Qt FAQ</a>&emsp;&bull;&ensp;
+<a href="http://www.helloworld.ru/" target="_blanc">HELLOWORLD.RU - документация и книги</a>&emsp;&bull;&ensp;
+<a href="https://www.fast-report.com/documentation/ProgMan-ru/index.html" target="_blanc">FastReport 4.6 Руководство программиста</a>&emsp;&bull;&ensp;
+<a href="https://www.fast-report.com/documentation/UserMan-ru/index.html" target="_blanc">FastReport 4.6 Руководство пользователя</a>&emsp;&bull;&ensp;
+</td>
+<tr>
+<th>Java</th>
+<td class="url_cell">
+<a href="https://docs.oracle.com/javase/7/docs/api/overview-summary.html" target="_blanc">Java документация</a>&emsp;&bull;&ensp;
+<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/frame.html" target="_blanc">The Java™ Tutorials</a>&emsp;&bull;&ensp;
+<a href="http://www.java2s.com/" target="_blanc">Java basic & how to</a>&emsp;&bull;&ensp;
+<a href="http://www.java2s.com/Code/Jar/CatalogJar.htm" target="_blanc">Jar File Download</a>&emsp;&bull;&ensp;
+<a href="https://metanit.com/java/tutorial/1.1.php" target="_blanc">Основы Java - METANIT.COM</a>&emsp;&bull;&ensp;
+<a href="https://math.sgu.ru/sites/chairs/prinf/materials/java/index.htm" target="_blanc">Программирование на языке Java</a>&emsp;&bull;&ensp;
+<a href="http://java-online.ru/index.xhtml" target="_blanc">Java онлайн для разработчиков</a>&emsp;&bull;&ensp;
+<a href="http://java-course.ru/begin/" target="_blanc">Начало Java - Сабуров Антон </a>&emsp;&bull;&ensp;
+<a href="http://khpi-iip.mipk.kharkiv.edu/library/extent/prog/index.html#pgm_java" target="_blanc">Учебники и справочники Java</a>&emsp;&bull;&ensp;
+<a href="http://darkraha.com/rus/java/index.php" target="_blanc">Справочник по java</a>&emsp;&bull;&ensp;
+<a href="http://www.frolov-lib.ru/programming/javasamples/index.html" target="_blanc">Библиотека примеров приложений Java</a>&emsp;&bull;&ensp;
+<a href="http://javastudy.ru/reference/interview/" target="_blanc">Вопросы собеседований по Java с ответами</a>&emsp;&bull;&ensp;
+<a href="https://javadevblog.com/" target="_blanc">Блог JavaDevBlog.com - Программирование на Java и разработка под Android</a>&emsp;&bull;&ensp;
+<a href="https://soft.mydiv.net/win/download-Android-SDK.html" target="_blanc">Download Android SDK</a>&emsp;&bull;&ensp;
+<a href="https://ru.stackoverflow.com/questions/198329/%d0%a3%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-android-sdk#198330" target="_blanc">Установка Android SDK</a>&emsp;&bull;&ensp;
+<a href="https://developer.android.com/reference/packages" target="_blanc">Android SDK - Справочник по пакетам</a>&emsp;&bull;&ensp;
+<a href="http://developer.alexanderklimov.ru/android/index.php" target="_blanc">Шкодим под Android</a>&emsp;&bull;&ensp;
+</td>
+<tr>
+<th>Web</th>
+<td class="url_cell">
+<a href="http://www.postroika.ru/html/content2.html" target="_blanc">Введение в HTML</a>&emsp;&bull;&ensp;
+<a href="http://on-line-teaching.com/html/index.html" target="_blanc">Язык HTML - основы</a>&emsp;&bull;&ensp;
+<a href="https://xsltdev.ru/" target="_blanc">Справочник HTML CSS XSLT XPath</a>&emsp;&bull;&ensp;
+<a href="http://htmlbook.ru/" target="_blanc">HTMLbook.ru</a>&emsp;&bull;&ensp;
+<a href="https://msiter.ru/tutorials" target="_blanc">Учебники и самоучители msiter.ru</a>&emsp;&bull;&ensp;
+<a href="https://learn.javascript.ru/" target="_blanc">Современный учебник Javascript</a>&emsp;&bull;&ensp;
+<a href="https://codebra.ru/" target="_blanc">Онлайн-курсы HTML, CSS</a>&emsp;&bull;&ensp;
+<a href="http://jqueryui.com/" target="_blanc">Библиотека jQuery UI</a>&emsp;&bull;&ensp;
+<a href="https://jsfiddle.net/" target="_blanc">Онлайн-редактор HTML CSS JS</a>&emsp;&bull;&ensp;
+<a href="http://htmlsandbox.com/" target="_blanc">HTML SandBox</a>&emsp;&bull;&ensp;
+<a href="https://habr.com/ru/post/38208/" target="_blanc">jQuery для начинающих</a>&emsp;&bull;&ensp;
+<a href="https://users.wix.com/signin?originUrl=https%3A%2F%2Fru.wix.com%2Fmy-account&postLogin=https%3A%2F%2Fru.wix.com%2Fmy-account&overrideLocale=ru" target="_blanc">WIX конструктор сайтов</a>
+</td>
+<tr>
+<th>ОС и утилиты</th>
+<td class="url_cell">
+<a href="http://heap.altlinux.org/modules/LinuxIntro.george/index.html" target="_blanc">Введение в ОС Linux</a>&emsp;&bull;&ensp;
+<a href="http://cmd4win.ru/stati-i-materialy" target="_blanc">Командная строка Windows</a>&emsp;&bull;&ensp;
+<a href="http://scriptcoding.ru/karta-sayta/" target="_blanc">Сценарии и команды Windows</a>&emsp;&bull;&ensp;
+<a href="http://www.iconarchive.com/" target="_blanc">Архив иконок</a>&emsp;&bull;&ensp;
+<a href="http://icongal.com/browse" target="_blanc">Галерея иконок</a>&emsp;&bull;&ensp;
+<a href="http://2cyr.com/decode/?lang=ru" target="_blanc">Универсальный декодер кириллицы</a>&emsp;&bull;&ensp;
+<a href="http://regex101.com/" target="_blanc">RegExp тестер</a>&emsp;&bull;&ensp;
+<a href="http://www.sbqr.ru/validator/index.html" target="_blanc">Валидатор QR-кода</a>&emsp;&bull;&ensp;
+<a href="http://citforum.ru/programming/shell/index.shtml" target="_blanc">Программирование на Shell</a> 
+</td>
+</table>
+</DIV>
+<!-------------------------------------------------------------------------------------------------------------------------------------------------->
+<br>
+<div class="head_div">
+<a name="5" href="javascript:void(0);" onclick="viewdiv('misc_div');" onmouseover="setbackcolor(this,1)" onmouseout="setbackcolor(this,0)">
+Языки
+</a>
+</div>
+
+<DIV id="misc_div" class="tab_div">
+<table border="1" cellspacing="0" cellpadding="4" >
+<tr>
+<th>Словари</th>
+<td class="url_cell">
+<a href="https://www.translate.ru/" target="_blanc">PROMT Онлайн</a>&emsp;&bull;&ensp;
+<a href="http://www.lingvo.ua/ru" target="_blanc">ABBYY Lingvo Англо-Русский</a>&emsp;&bull;&ensp;
+<a href="https://translate.google.ru/#view=home&op=translate&sl=it&tl=ru" target="_blanc">Google переводчик</a>&emsp;&bull;&ensp;
+<a href="https://translate.yandex.ru/translator/Italian-Russian" target="_blanc">Итальянско-русский</a>
+</td>
+</table>
+</DIV>
+
+<div id="r0">
+   <br>
+   Какой-то текст.
+   <a href="javascript:change_visibility ('r0', 'r1')">
+      Читать далее»
+   </a>
+</div>
+<div id="r1" style="display:none">
+    <br>
+    Какой-то текст.<br>
+    И продолжение текста
+    <a href="#" onClick="change_visibility ('r1', 'r0')">
+       «Скрыть взад
+    </a>
+</div>
+
+<script>
+//ЦВЕТА ГИПЕРССЫЛОК
+document.linkColor = 'green';
+document.vlinkColor = 'green';
+
+//УСТАНОВКА ТЕКУЩЕЙ ДАТЫ И ВРЕМЕНИ
+function refreshDateTime() { 
+  document.getElementById('datetime').innerHTML = renderDate('HTML'); 
+  setTimeout(refreshDateTime, 60000); 
+}
+refreshDateTime();
+document.getElementById('search_bar').focus();
+
+// ОТОБРАЖЕНИЕ ФОРМЫ КАЛЬКУЛЯТОРА
+function openCalcForm(){
+  var el=document.getElementById('calculator_block');
+  el.style.display="block";
+  document.getElementById('exprToCalc').focus();
+}  
+// ВВОД В КАЛЬКУЛЯТОРЕ
+function addVal(val){
+  document.getElementById('exprToCalc').value+=val;
+  document.getElementById('exprToCalc').focus();
+}
+//ВЫЧИСЛЕНИЕ В КАЛЬКУЛЯТОРЕ - операция
+function calcOper(oper){
+  if (document.getElementById('argToCalc').value==''){ //Первая операция
+    document.getElementById('argToCalc').value = document.getElementById('exprToCalc').value;  //Перенос введенного значения в аргумент
+  }
+  else{ // Очередная операция
+    if (document.getElementById('operToCalc').value=='')
+      document.getElementById('argToCalc').value = document.getElementById('exprToCalc').value;
+    else{
+      switch(document.getElementById('operToCalc').value){
+        case '^': { 
+          document.getElementById('argToCalc').value = eval('Math.pow('+document.getElementById('argToCalc').value+','+document.getElementById('exprToCalc').value+')');   
+          break;
+        }
+        default :
+          document.getElementById('argToCalc').value = eval(document.getElementById('argToCalc').value+document.getElementById('operToCalc').value + document.getElementById('exprToCalc').value); // Вычисление результата операции аргумента с введенным значением
+      }
+    }  
+ } 
+ document.getElementById('operToCalc').value = oper; // Запись операции
+ document.getElementById('exprToCalc').value = ''; // Сброс введенного значения
+ document.getElementById('exprToCalc').focus();
+}
+//ВЫЧИСЛЕНИЕ В КАЛЬКУЛЯТОРЕ - функция
+function calcFunc(oper){
+ if (oper.charCodeAt(0)==8730) //&radic; Вычисление квадратного корня
+   document.getElementById('exprToCalc').value = eval('Math.sqrt('+document.getElementById('exprToCalc').value+')');
+ else {
+   if (oper.charCodeAt(0)==177) // +-
+     document.getElementById('exprToCalc').value = eval('-1*'+document.getElementById('exprToCalc').value);
+   else {
+     if(oper=='1/x')
+     document.getElementById('exprToCalc').value = eval('1/'+document.getElementById('exprToCalc').value);
+   }  
+ }
+ if(oper=='='){
+   calcOper('');
+   document.getElementById('operToCalc').value = ''; // Сброс операции
+   document.getElementById('exprToCalc').value = document.getElementById('argToCalc').value; // Перенос вычисленного значения
+   document.getElementById('argToCalc').value = '';// Сброс аргумента
+ }  
+ document.getElementById('exprToCalc').focus();
+}  
+//СБРОС В КАЛЬКУЛЯТОРЕ
+function clearCalc(){ 
+ document.getElementById('argToCalc').value = '';
+ document.getElementById('exprToCalc').value = '';
+ document.getElementById('operToCalc').value = '';
+ document.getElementById('exprToCalc').focus();
+}
+// НАЖАТИЕ КЛАВИШИ В КАЛЬКУЛЯТОРЕ  
+function handleKeyDown(code){ // code - код клавиши а не символа!
+  var ch;
+  if(code==13) //Enter
+    calcFunc('=');
+  else if(code==106 || code==107 || code==109 || code==111){ // нажатие клавиш * + - / на Num Pad
+    switch(code){
+      case 106:{ ch = '*'; break;}
+      case 107:{ ch = '+'; break;}
+      case 109:{ ch = '-'; break;}
+      case 111:{ ch = '/'; break;}
+    }
+    document.getElementById('exprToCalc').value = document.getElementById('exprToCalc').value.substr(0,document.getElementById('exprToCalc').value.length-1);
+    calcOper(ch);
+    document.getElementById('exprToCalc').value = '';  
+  }  
+  else if(code==110) //Num Pad '.'
+    document.getElementById('exprToCalc').value = document.getElementById('exprToCalc').value.replace(',','.');
+  else if(code==27) //Escape
+    document.getElementById('calculator_block').style.display = 'none';
+  //else  
+    //alert(code);// code - код клавиши а не символа!
+  
+}
+
+</script>
+
+</BODY>
+</HTML>
