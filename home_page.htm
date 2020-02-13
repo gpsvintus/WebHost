@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>Домашняя страница</TITLE>
+<TITLE>Р”РѕРјР°С€РЅСЏСЏ СЃС‚СЂР°РЅРёС†Р°</TITLE>
 
 <style type="text/css">
 .head_div{
@@ -11,10 +11,10 @@
   background-color: red;
 }
 .head_div a {
-  display: block; /* Ссылка как блочный элемент */
-  text-align: center; /* Выравнивание по центру */
-  text-decoration: none; /* Убрать подчеркивание */
-  color: #666; /* Цвет ссылки */
+  display: block; /* РЎСЃС‹Р»РєР° РєР°Рє Р±Р»РѕС‡РЅС‹Р№ СЌР»РµРјРµРЅС‚ */
+  text-align: center; /* Р’С‹СЂР°РІРЅРёРІР°РЅРёРµ РїРѕ С†РµРЅС‚СЂСѓ */
+  text-decoration: none; /* РЈР±СЂР°С‚СЊ РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ */
+  color: #666; /* Р¦РІРµС‚ СЃСЃС‹Р»РєРё */
   font: bold 12pt/30pt sans-serif;
 }
 table {
@@ -68,7 +68,7 @@ table {
 <SCRIPT>
 colors = new Array("red","yellow","cyan","fuchsia","lime","#fc0","#abf");
 
-// смена фона ссылки
+// СЃРјРµРЅР° С„РѕРЅР° СЃСЃС‹Р»РєРё
 function setbackcolor(el, mode){
   if (mode==1)
     el.style.backgroundColor=colors[el.name];
@@ -76,7 +76,7 @@ function setbackcolor(el, mode){
     el.style.backgroundColor="silver";
 }
 
-// отображение/скрытие блочного элемента
+// РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ/СЃРєСЂС‹С‚РёРµ Р±Р»РѕС‡РЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
 function viewdiv(id){
   var el=document.getElementById(id);
   if (el.style.display=="block")
@@ -89,7 +89,7 @@ function change_visibility (block_4_close, block_4_open) {
   document.getElementById(block_4_close).style.display='none';
   document.getElementById(block_4_open).style.display='';
 }
-// с использованием библиотеки jQuery
+// СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј Р±РёР±Р»РёРѕС‚РµРєРё jQuery
 function change_visibility2 (block_4_close, block_4_open) {
   $(document).ready(function(){
      $('#'+block_4_close).css('display','none');
@@ -104,28 +104,28 @@ function change_visibility2 (block_4_close, block_4_open) {
 <BODY>
 <!-------------------------------------------------------------------------------------------------------------------------------------------------->
 <header style="height: 40px; width: 100%; padding: 0;">
-<div id="datetime" style="position: relative; float: right; top: 10; right: 10; ">Сегодня...</div>
+<div id="datetime" style="position: relative; float: right; top: 10; right: 10; ">РЎРµРіРѕРґРЅСЏ...</div>
 </header>
 
-<!--    Конвертер единиц (болванка)
+<!--    РљРѕРЅРІРµСЂС‚РµСЂ РµРґРёРЅРёС† (Р±РѕР»РІР°РЅРєР°)
 <div class="vk_c _cy obcontainer card-section">
 
 <div class="_frf"> 
   <select class="_nif _Ohf iTbk9tdPeYks-trqxvH0pmCk" jsaction="change:r.3r2U78ZXCIY" data-rtid="iTbk9tdPeYks" jsl="$x 1;" data-ved="0ahUKEwje9s6kk-vNAhWIPZoKHcQeD7IQ6WoIGzAA"> 
-    <option value="Время">Время</option>
-    <option value="Давление">Давление</option>
-    <option selected="selected" value="Длина">Длина</option>
-    <option value="Масса">Масса</option>
-    <option value="Объем">Объем</option>
-    <option value="Объем информации">Объем информации</option>
-    <option value="Плоский угол">Плоский угол</option>
-    <option value="Площадь">Площадь</option>
-    <option value="Расход топлива">Расход топлива</option>
-    <option value="Скорость">Скорость</option>
-    <option value="Скорость Передачи Данных">Скорость Передачи Данных</option>
-    <option value="Температура">Температура</option>
-    <option value="Частота">Частота</option>
-    <option value="Энергия">Энергия</option>
+    <option value="Р’СЂРµРјСЏ">Р’СЂРµРјСЏ</option>
+    <option value="Р”Р°РІР»РµРЅРёРµ">Р”Р°РІР»РµРЅРёРµ</option>
+    <option selected="selected" value="Р”Р»РёРЅР°">Р”Р»РёРЅР°</option>
+    <option value="РњР°СЃСЃР°">РњР°СЃСЃР°</option>
+    <option value="РћР±СЉРµРј">РћР±СЉРµРј</option>
+    <option value="РћР±СЉРµРј РёРЅС„РѕСЂРјР°С†РёРё">РћР±СЉРµРј РёРЅС„РѕСЂРјР°С†РёРё</option>
+    <option value="РџР»РѕСЃРєРёР№ СѓРіРѕР»">РџР»РѕСЃРєРёР№ СѓРіРѕР»</option>
+    <option value="РџР»РѕС‰Р°РґСЊ">РџР»РѕС‰Р°РґСЊ</option>
+    <option value="Р Р°СЃС…РѕРґ С‚РѕРїР»РёРІР°">Р Р°СЃС…РѕРґ С‚РѕРїР»РёРІР°</option>
+    <option value="РЎРєРѕСЂРѕСЃС‚СЊ">РЎРєРѕСЂРѕСЃС‚СЊ</option>
+    <option value="РЎРєРѕСЂРѕСЃС‚СЊ РџРµСЂРµРґР°С‡Рё Р”Р°РЅРЅС‹С…">РЎРєРѕСЂРѕСЃС‚СЊ РџРµСЂРµРґР°С‡Рё Р”Р°РЅРЅС‹С…</option>
+    <option value="РўРµРјРїРµСЂР°С‚СѓСЂР°">РўРµРјРїРµСЂР°С‚СѓСЂР°</option>
+    <option value="Р§Р°СЃС‚РѕС‚Р°">Р§Р°СЃС‚РѕС‚Р°</option>
+    <option value="Р­РЅРµСЂРіРёСЏ">Р­РЅРµСЂРіРёСЏ</option>
   </select> 
 </div> 
 
@@ -133,16 +133,16 @@ function change_visibility2 (block_4_close, block_4_open) {
 <input class="_eif iTbk9tdPeYks-TAgAjI3bJNo" value="1" jsaction="change:r.EQNHKrw0qdA;keyup:r.EQNHKrw0qdA;r.JnbD_-w_xe0" data-rtid="iTbk9tdPeYks" jsl="$x 2;" data-ved="0ahUKEwje9s6kk-vNAhWIPZoKHcQeD7IQ5WoIHDAA"> 
 
 <select class="_dif _Ohf iTbk9tdPeYks-y69YkR-bRoA" id="_Bif" jsaction="change:r.tDOMoafrm4E" data-rtid="iTbk9tdPeYks" jsl="$x 3;" data-ved="0ahUKEwje9s6kk-vNAhWIPZoKHcQeD7IQ5moIHTAA">  
-<option text="Километр">Километр</option>
-<option text="Метр">Метр</option>
-<option selected="selected" text="Сантиметр">Сантиметр</option>
-<option text="Миллиметр">Миллиметр</option>
-<option text="Микрометр">Микрометр</option>
-<option text="Нанометр">Нанометр</option>
-<option text="Миля">Миля</option><option text="Ярд">Ярд</option>
-<option text="Фут">Фут</option>
-<option text="Дюйм">Дюйм</option>
-<option text="Морская миля">Морская миля</option>  
+<option text="РљРёР»РѕРјРµС‚СЂ">РљРёР»РѕРјРµС‚СЂ</option>
+<option text="РњРµС‚СЂ">РњРµС‚СЂ</option>
+<option selected="selected" text="РЎР°РЅС‚РёРјРµС‚СЂ">РЎР°РЅС‚РёРјРµС‚СЂ</option>
+<option text="РњРёР»Р»РёРјРµС‚СЂ">РњРёР»Р»РёРјРµС‚СЂ</option>
+<option text="РњРёРєСЂРѕРјРµС‚СЂ">РњРёРєСЂРѕРјРµС‚СЂ</option>
+<option text="РќР°РЅРѕРјРµС‚СЂ">РќР°РЅРѕРјРµС‚СЂ</option>
+<option text="РњРёР»СЏ">РњРёР»СЏ</option><option text="РЇСЂРґ">РЇСЂРґ</option>
+<option text="Р¤СѓС‚">Р¤СѓС‚</option>
+<option text="Р”СЋР№Рј">Р”СЋР№Рј</option>
+<option text="РњРѕСЂСЃРєР°СЏ РјРёР»СЏ">РњРѕСЂСЃРєР°СЏ РјРёР»СЏ</option>  
 </select> 
 </div> 
 
@@ -151,17 +151,17 @@ function change_visibility2 (block_4_close, block_4_open) {
 <div class="_cif" id="_Cif"> 
 <input class="_eif iTbk9tdPeYks-7Ob2ZtRDv2s" value="5,38058" jsaction="change:r.Y8jfekOjBAk;keyup:r.Y8jfekOjBAk;r.GsMrmfckh-M" data-rtid="iTbk9tdPeYks" jsl="$x 4;" data-ved="0ahUKEwje9s6kk-vNAhWIPZoKHcQeD7IQ52oIHjAA"> 
 <select class="_dif _Ohf iTbk9tdPeYks-EXIkszwxM2g" jsaction="change:r.xd0JMVj7UXs" data-rtid="iTbk9tdPeYks" jsl="$x 5;" data-ved="0ahUKEwje9s6kk-vNAhWIPZoKHcQeD7IQ6GoIHzAA">  
-<option text="Километр">Километр</option>
-<option text="Метр">Метр</option>
-<option text="Сантиметр">Сантиметр</option>
-<option text="Миллиметр">Миллиметр</option>
-<option text="Микрометр">Микрометр</option>
-<option text="Нанометр">Нанометр</option>
-<option text="Миля">Миля</option>
-<option text="Ярд">Ярд</option>
-<option selected="selected" text="Фут">Фут</option>
-<option text="Дюйм">Дюйм</option>
-<option text="Морская миля">Морская миля</option>  
+<option text="РљРёР»РѕРјРµС‚СЂ">РљРёР»РѕРјРµС‚СЂ</option>
+<option text="РњРµС‚СЂ">РњРµС‚СЂ</option>
+<option text="РЎР°РЅС‚РёРјРµС‚СЂ">РЎР°РЅС‚РёРјРµС‚СЂ</option>
+<option text="РњРёР»Р»РёРјРµС‚СЂ">РњРёР»Р»РёРјРµС‚СЂ</option>
+<option text="РњРёРєСЂРѕРјРµС‚СЂ">РњРёРєСЂРѕРјРµС‚СЂ</option>
+<option text="РќР°РЅРѕРјРµС‚СЂ">РќР°РЅРѕРјРµС‚СЂ</option>
+<option text="РњРёР»СЏ">РњРёР»СЏ</option>
+<option text="РЇСЂРґ">РЇСЂРґ</option>
+<option selected="selected" text="Р¤СѓС‚">Р¤СѓС‚</option>
+<option text="Р”СЋР№Рј">Р”СЋР№Рј</option>
+<option text="РњРѕСЂСЃРєР°СЏ РјРёР»СЏ">РњРѕСЂСЃРєР°СЏ РјРёР»СЏ</option>  
 </select> 
 </div>
 
@@ -170,7 +170,7 @@ function change_visibility2 (block_4_close, block_4_open) {
 
 <div style="text-align: center; width: 100%; padding: 10px;" >
 <form name="calculator" >
-<input type="button" value="Калькулятор" onClick="openCalcForm()">
+<input type="button" value="РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ" onClick="openCalcForm()">
 <br>
 <input type="textfield" name="expr" value="" onChange="document.calculator.res.value=eval(document.calculator.expr.value)">
 <input type="button" value="=" onClick="document.calculator.res.value=eval(document.calculator.expr.value)">
@@ -226,7 +226,7 @@ function change_visibility2 (block_4_close, block_4_open) {
 </div>
 
 <div style="text-align: center; width: 100%; padding: 10px;">
-<div style="font: bold 24pt/48pt sans-serif;">Поиск Mail.ru</div>
+<div style="font: bold 24pt/48pt sans-serif;">РџРѕРёСЃРє Mail.ru</div>
 <input style="padding: 10px; border: solid 1px #48f; font-size: 12pt;" id="search_bar" type="text" size="60" onchange="if (this.value!='') window.open('https://go.mail.ru/search?fr=main&sbmt=1526626934251&frm=main&q='+this.value+'&=','_blank')">
 </div>
 
@@ -240,48 +240,48 @@ function change_visibility2 (block_4_close, block_4_open) {
 <br>
 <div class="head_div">
 <a name="0" href="javascript:void(0);" onclick="viewdiv('mydiv')">
-Финансы и услуги
+Р¤РёРЅР°РЅСЃС‹ Рё СѓСЃР»СѓРіРё
 </a>
 </div>
 
 <DIV id="mydiv" class="tab_div">
 <table border="1" cellspacing="0" cellpadding="4" >
 <tr>
-<th>Интернет-банкинг</th>
+<th>РРЅС‚РµСЂРЅРµС‚-Р±Р°РЅРєРёРЅРі</th>
 <td class="url_cell">
-<a href="https://online.mtsbank.ru/webmvc/clientLogin" target="_blanc">МТС Банк</a>&emsp;&bull;&ensp;
-<a href="https://online.sberbank.ru/CSAFront/index.do" target="_blanc">Сбербанк Онлайн</a>&emsp;&bull;&ensp;
-<a href="https://online.openbank.ru/logon" target="_blanc">Открытие Online</a>&emsp;&bull;&ensp;
-<a href="https://lks.domclick.ru" target="_blanc">ДомКлик от Сбербанка</a>&emsp;&bull;&ensp;
+<a href="https://online.mtsbank.ru/webmvc/clientLogin" target="_blanc">РњРўРЎ Р‘Р°РЅРє</a>&emsp;&bull;&ensp;
+<a href="https://online.sberbank.ru/CSAFront/index.do" target="_blanc">РЎР±РµСЂР±Р°РЅРє РћРЅР»Р°Р№РЅ</a>&emsp;&bull;&ensp;
+<a href="https://online.openbank.ru/logon" target="_blanc">РћС‚РєСЂС‹С‚РёРµ Online</a>&emsp;&bull;&ensp;
+<a href="https://lks.domclick.ru" target="_blanc">Р”РѕРјРљР»РёРє РѕС‚ РЎР±РµСЂР±Р°РЅРєР°</a>&emsp;&bull;&ensp;
 </td>
 <tr>
-<th>Личные кабинеты</th>
+<th>Р›РёС‡РЅС‹Рµ РєР°Р±РёРЅРµС‚С‹</th>
 <td class="url_cell">
-<a href="https://pay.erkcufa.ru/Login.aspx?ReturnUrl=%2fdefault.aspx&AspxAutoDetectCookieSupport=1" target="_blanc">ЕРКЦ</a>&emsp;&bull;&ensp;
-<a href="https://lkk.bashesk.ru/auth" target="_blanc">Электроэнергия ЭСКБ Русгидро</a>&emsp;&bull;&ensp;
-<a href="https://lkpe.bashrts.bgkrb.ru/Account/Login" target="_blanc">БашРТС</a>&emsp;&bull;&ensp;
-<a href="https://lk.ufa.zelenaya.net/login" target="_blanc">Интернет Зеленая точка</a>&emsp;&bull;&ensp;
-<a href="https://lk.ssl.mts.ru/" target="_blanc">МТС Личный кабинет</a>&emsp;&bull;&ensp;
-<a href="https://bonus.ssl.mts.ru/#!/" target="_blanc">МТС Бонус</a>&emsp;&bull;&ensp;
-<a href="https://my.perekrestok.ru/login" target="_blanc">Клуб Перекресток</a>&emsp;&bull;&ensp;
-<a href="https://customer.licard.ru/#/auth/login" target="_blanc">Клуб Лукойл</a>&emsp;&bull;&ensp;
-<a href="https://www.gosuslugi.ru/" target="_blanc">Единый портал госуслуг</a>&emsp;&bull;&ensp;
-<a href="https://lkfl2.nalog.ru/lkfl/login" target="_blanc">ЛК налогоплательщика</a>&emsp;&bull;&ensp;
-<a href="https://my.5ka.ru/login" target="_blanc">Пятерочка</a>&emsp;&bull;&ensp;
-<a href="https://lk.npfe.ru/ru/index.php" target="_blanc">НПФ Электроэнергетики</a>
+<a href="https://pay.erkcufa.ru/Login.aspx?ReturnUrl=%2fdefault.aspx&AspxAutoDetectCookieSupport=1" target="_blanc">Р•Р РљР¦</a>&emsp;&bull;&ensp;
+<a href="https://lkk.bashesk.ru/auth" target="_blanc">Р­Р»РµРєС‚СЂРѕСЌРЅРµСЂРіРёСЏ Р­РЎРљР‘ Р СѓСЃРіРёРґСЂРѕ</a>&emsp;&bull;&ensp;
+<a href="https://lkpe.bashrts.bgkrb.ru/Account/Login" target="_blanc">Р‘Р°С€Р РўРЎ</a>&emsp;&bull;&ensp;
+<a href="https://lk.ufa.zelenaya.net/login" target="_blanc">РРЅС‚РµСЂРЅРµС‚ Р—РµР»РµРЅР°СЏ С‚РѕС‡РєР°</a>&emsp;&bull;&ensp;
+<a href="https://lk.ssl.mts.ru/" target="_blanc">РњРўРЎ Р›РёС‡РЅС‹Р№ РєР°Р±РёРЅРµС‚</a>&emsp;&bull;&ensp;
+<a href="https://bonus.ssl.mts.ru/#!/" target="_blanc">РњРўРЎ Р‘РѕРЅСѓСЃ</a>&emsp;&bull;&ensp;
+<a href="https://my.perekrestok.ru/login" target="_blanc">РљР»СѓР± РџРµСЂРµРєСЂРµСЃС‚РѕРє</a>&emsp;&bull;&ensp;
+<a href="https://customer.licard.ru/#/auth/login" target="_blanc">РљР»СѓР± Р›СѓРєРѕР№Р»</a>&emsp;&bull;&ensp;
+<a href="https://www.gosuslugi.ru/" target="_blanc">Р•РґРёРЅС‹Р№ РїРѕСЂС‚Р°Р» РіРѕСЃСѓСЃР»СѓРі</a>&emsp;&bull;&ensp;
+<a href="https://lkfl2.nalog.ru/lkfl/login" target="_blanc">Р›Рљ РЅР°Р»РѕРіРѕРїР»Р°С‚РµР»СЊС‰РёРєР°</a>&emsp;&bull;&ensp;
+<a href="https://my.5ka.ru/login" target="_blanc">РџСЏС‚РµСЂРѕС‡РєР°</a>&emsp;&bull;&ensp;
+<a href="https://lk.npfe.ru/ru/index.php" target="_blanc">РќРџР¤ Р­Р»РµРєС‚СЂРѕСЌРЅРµСЂРіРµС‚РёРєРё</a>
 </td>
 <tr>
-<th>Банки</th>
+<th>Р‘Р°РЅРєРё</th>
 <td class="url_cell">
-<a href="http://www.banki.ru/" target="_blanc">Портал Банки.ру</a>&emsp;&bull;&ensp;
-<a href="http://analizbankov.ru/bank.php" target="_blanc">Анализ состояния банков</a>&emsp;&bull;&ensp;
-<a href="http://kuap.ru/" target="_blanc">КУАП - Финансовый анализ банков</a>&emsp;&bull;&ensp;
-<a href="http://www.forbes.ru/rating/315145-kredit-doveriya-reiting-nadezhnosti-bankov" target="_blanc">Рейтинг банков от Форбс 2016</a> 
+<a href="http://www.banki.ru/" target="_blanc">РџРѕСЂС‚Р°Р» Р‘Р°РЅРєРё.СЂСѓ</a>&emsp;&bull;&ensp;
+<a href="http://analizbankov.ru/bank.php" target="_blanc">РђРЅР°Р»РёР· СЃРѕСЃС‚РѕСЏРЅРёСЏ Р±Р°РЅРєРѕРІ</a>&emsp;&bull;&ensp;
+<a href="http://kuap.ru/" target="_blanc">РљРЈРђРџ - Р¤РёРЅР°РЅСЃРѕРІС‹Р№ Р°РЅР°Р»РёР· Р±Р°РЅРєРѕРІ</a>&emsp;&bull;&ensp;
+<a href="http://www.forbes.ru/rating/315145-kredit-doveriya-reiting-nadezhnosti-bankov" target="_blanc">Р РµР№С‚РёРЅРі Р±Р°РЅРєРѕРІ РѕС‚ Р¤РѕСЂР±СЃ 2016</a> 
 </td>
 <tr>
-<th>Инфо</th>
+<th>РРЅС„Рѕ</th>
 <td class="url_cell">
-<a href="http://hranidengi.ru/" target="_blanc">Блог практичного инвестора</a>&emsp;&bull;&ensp;
+<a href="http://hranidengi.ru/" target="_blanc">Р‘Р»РѕРі РїСЂР°РєС‚РёС‡РЅРѕРіРѕ РёРЅРІРµСЃС‚РѕСЂР°</a>&emsp;&bull;&ensp;
 </td>
 </table>
 </DIV>
@@ -289,57 +289,57 @@ function change_visibility2 (block_4_close, block_4_open) {
 <br>
 <div class="head_div">
 <a name="1" href="javascript:void(0);" onclick="viewdiv('mydiv2');" onmouseover="setbackcolor(this,1)" onmouseout="setbackcolor(this,0)">
-Спорт
+РЎРїРѕСЂС‚
 </a>
 
 </div>
 <DIV id="mydiv2" class="tab_div">
 <table border="1" cellspacing="0" cellpadding="4" >
 <tr>
-<th>Лыжи</th>
+<th>Р›С‹Р¶Рё</th>
 <td class="url_cell">
-<a href="http://www.skisport.ru/" target="_blanc">Лыжный спорт</a>
+<a href="http://www.skisport.ru/" target="_blanc">Р›С‹Р¶РЅС‹Р№ СЃРїРѕСЂС‚</a>
 </td>
 <tr>
-<th>Шахматы</th>
+<th>РЁР°С…РјР°С‚С‹</th>
 <td class="url_cell">
 <a href="https://www.chess.com/ru" target="_blanc">Chess.com</a>&emsp;&bull;&ensp;
 <a href="https://www.chess.com/ru/forum/category/daily-puzzles" target="_blanc">Daily Chess Puzzles</a>&emsp;&bull;&ensp;
-<a href="https://www.chess.com/play/computer" target="_blanc">Игра с компьютером</a>
+<a href="https://www.chess.com/play/computer" target="_blanc">РРіСЂР° СЃ РєРѕРјРїСЊСЋС‚РµСЂРѕРј</a>
 </td>
 <tr>
-<th>Футбол</th>
+<th>Р¤СѓС‚Р±РѕР»</th>
 <td class="url_cell">
-<a href="http://bobsoccer.ru/news/" target="_blanc">Портал BobSoccer</a>&emsp;&bull;&ensp;
-<a href="https://prosm.club/" target="_blanc">Все о Спартаке</a>&emsp;&bull;&ensp;
-<a href="https://www.soccer.ru/blogs/SpaM" target="_blanc">Портал SOCCER.RU блог «Спартаком» единым</a>&emsp;&bull;&ensp;
-<a href="http://sport-stream.ru/" target="_blanc">Live трансляции</a>&emsp;&bull;&ensp;
-<a href="https://livesport.ws/live-football" target="_blanc">Футбол он-лайн трансляции</a>&emsp;&bull;&ensp;
-<a href="http://regista.one/" target="_blanc">Реджиста.Читаем игру</a>&emsp;&bull;&ensp;
-<a href="https://counterpress.ru/" target="_blanc">Контрпресс</a>&emsp;&bull;&ensp;
-<a href="https://www.youtube.com/user/FCSMofficial" target="_blanc">YouTube Спартак</a>&emsp;&bull;&ensp;
-<a href="https://www.youtube.com/channel/UCj49b9QYnEu_oqy-1HyXG8A" target="_blanc">YouTube Александр Бубнов</a>&emsp;&bull;&ensp;
+<a href="http://bobsoccer.ru/news/" target="_blanc">РџРѕСЂС‚Р°Р» BobSoccer</a>&emsp;&bull;&ensp;
+<a href="https://prosm.club/" target="_blanc">Р’СЃРµ Рѕ РЎРїР°СЂС‚Р°РєРµ</a>&emsp;&bull;&ensp;
+<a href="https://www.soccer.ru/blogs/SpaM" target="_blanc">РџРѕСЂС‚Р°Р» SOCCER.RU Р±Р»РѕРі В«РЎРїР°СЂС‚Р°РєРѕРјВ» РµРґРёРЅС‹Рј</a>&emsp;&bull;&ensp;
+<a href="http://sport-stream.ru/" target="_blanc">Live С‚СЂР°РЅСЃР»СЏС†РёРё</a>&emsp;&bull;&ensp;
+<a href="https://livesport.ws/live-football" target="_blanc">Р¤СѓС‚Р±РѕР» РѕРЅ-Р»Р°Р№РЅ С‚СЂР°РЅСЃР»СЏС†РёРё</a>&emsp;&bull;&ensp;
+<a href="http://regista.one/" target="_blanc">Р РµРґР¶РёСЃС‚Р°.Р§РёС‚Р°РµРј РёРіСЂСѓ</a>&emsp;&bull;&ensp;
+<a href="https://counterpress.ru/" target="_blanc">РљРѕРЅС‚СЂРїСЂРµСЃСЃ</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/user/FCSMofficial" target="_blanc">YouTube РЎРїР°СЂС‚Р°Рє</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UCj49b9QYnEu_oqy-1HyXG8A" target="_blanc">YouTube РђР»РµРєСЃР°РЅРґСЂ Р‘СѓР±РЅРѕРІ</a>&emsp;&bull;&ensp;
 </td>
 <tr>
-<th>Формула 1</th>
+<th>Р¤РѕСЂРјСѓР»Р° 1</th>
 <td class="url_cell">
 <a href="https://www.f1-portal.ru/" target="_blanc">F1 Portal</a>&emsp;&bull;&ensp;
 <a href="http://www.f1news.ru/" target="_blanc">F1 news.ru</a>&emsp;&bull;&ensp;
-<a href="http://www.f1-world.ru/" target="_blanc">Мир Формулы 1</a>&emsp;&bull;&ensp;
+<a href="http://www.f1-world.ru/" target="_blanc">РњРёСЂ Р¤РѕСЂРјСѓР»С‹ 1</a>&emsp;&bull;&ensp;
 <a href="http://f1report.ru/" target="_blanc">F1Report.ru</a>&emsp;&bull;&ensp;
-<a href="http://www.sports.ru/automoto/f1/" target="_blanc">Спортс.Ру Формула-1</a>
+<a href="http://www.sports.ru/automoto/f1/" target="_blanc">РЎРїРѕСЂС‚СЃ.Р Сѓ Р¤РѕСЂРјСѓР»Р°-1</a>
 </td>
 <tr>
-<th>Новости</th>
+<th>РќРѕРІРѕСЃС‚Рё</th>
 <td class="url_cell">
-<a href="https://sport24.ru/" target="_blanc">Спорт - 24</a>&emsp;&bull;&ensp;
-<a href="http://news.rambler.ru/sport/" target="_blanc">Спорт - Рамблер.Новости</a>&emsp;&bull;&ensp;
-<a href="http://www.gazeta.ru/sport/" target="_blanc">Газета.Ру</a>&emsp;&bull;&ensp;
-<a href="http://lenta.ru/rubrics/sport" target="_blanc">Лента.Ру</a>&emsp;&bull;&ensp;
-<a href="http://www.sport-express.ru/" target="_blanc">СПОРТ-ЭКСПРЕСС</a>&emsp;&bull;&ensp;
-<a href="http://stadium.ru/" target="_blanc">Российский Стадион</a>&emsp;&bull;&ensp;
+<a href="https://sport24.ru/" target="_blanc">РЎРїРѕСЂС‚ - 24</a>&emsp;&bull;&ensp;
+<a href="http://news.rambler.ru/sport/" target="_blanc">РЎРїРѕСЂС‚ - Р Р°РјР±Р»РµСЂ.РќРѕРІРѕСЃС‚Рё</a>&emsp;&bull;&ensp;
+<a href="http://www.gazeta.ru/sport/" target="_blanc">Р“Р°Р·РµС‚Р°.Р Сѓ</a>&emsp;&bull;&ensp;
+<a href="http://lenta.ru/rubrics/sport" target="_blanc">Р›РµРЅС‚Р°.Р Сѓ</a>&emsp;&bull;&ensp;
+<a href="http://www.sport-express.ru/" target="_blanc">РЎРџРћР Рў-Р­РљРЎРџР Р•РЎРЎ</a>&emsp;&bull;&ensp;
+<a href="http://stadium.ru/" target="_blanc">Р РѕСЃСЃРёР№СЃРєРёР№ РЎС‚Р°РґРёРѕРЅ</a>&emsp;&bull;&ensp;
 <a href="http://championat.com/" target="_blanc">Championat</a>&emsp;&bull;&ensp;
-<a href="http://www.sports.ru/" target="_blanc">Спортс.Ру</a>
+<a href="http://www.sports.ru/" target="_blanc">РЎРїРѕСЂС‚СЃ.Р Сѓ</a>
 </td>
 </table>
 </DIV>
@@ -347,97 +347,97 @@ function change_visibility2 (block_4_close, block_4_open) {
 <br>
 <div class="head_div">
 <a name="2" href="javascript:void(0);" onclick="viewdiv('mydiv3');" onmouseover="setbackcolor(this,1)" onmouseout="setbackcolor(this,0)">
-Разное
+Р Р°Р·РЅРѕРµ
 </a>
 </div>
 
 <DIV id="mydiv3" class="tab_div">
 <table border="1" cellspacing="0" cellpadding="4" >
 <tr>
-<th>Погода</th>
+<th>РџРѕРіРѕРґР°</th>
 <td class="url_cell">
 <a href="http://www.foreca.com/Russia/Ufa" target="_blanc">Foreca.com Ufa</a>&emsp;&bull;&ensp;
-<a href="https://www.bgkrb.ru/consumers/weather.php" target="_blanc">БашРТС On-line погода по Уфe</a>&emsp;&bull;&ensp;
-<a href="http://termoufa.ru/" target="_blanc">Термометр Уфы</a>&emsp;&bull;&ensp;
-<a href="http://rp5.ru/8667/ru" target="_blanc">RP5 - Погода в Уфе</a>&emsp;&bull;&ensp;
-<a href="http://www.gismeteo.ru/city/daily/4588/" target="_blanc">ГИС Метео - Уфа</a>
+<a href="https://www.bgkrb.ru/consumers/weather.php" target="_blanc">Р‘Р°С€Р РўРЎ On-line РїРѕРіРѕРґР° РїРѕ РЈС„e</a>&emsp;&bull;&ensp;
+<a href="http://termoufa.ru/" target="_blanc">РўРµСЂРјРѕРјРµС‚СЂ РЈС„С‹</a>&emsp;&bull;&ensp;
+<a href="http://rp5.ru/8667/ru" target="_blanc">RP5 - РџРѕРіРѕРґР° РІ РЈС„Рµ</a>&emsp;&bull;&ensp;
+<a href="http://www.gismeteo.ru/city/daily/4588/" target="_blanc">Р“РРЎ РњРµС‚РµРѕ - РЈС„Р°</a>
 </td>
 <tr>
-<th>Почта</th>
+<th>РџРѕС‡С‚Р°</th>
 <td class="url_cell">
-<a href="https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&continue=https://drive.google.com/drive/&followup=https://drive.google.com/drive/&emr=1" target="_blanc">Google диск</a>&emsp;&bull;&ensp;
-<a href="https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://photos.google.com/login&followup=https://photos.google.com/login" target="_blanc">Google Фото</a>&emsp;&bull;&ensp;
-<a href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1" target="_blanc">Почта GMail</a>&emsp;&bull;&ensp;
-<a href="https://e.mail.ru/cgi-bin/login" target="_blanc">Почта Mail.ru</a>
+<a href="https://accounts.google.com/ServiceLogin?service=wise&passive=1209600&continue=https://drive.google.com/drive/&followup=https://drive.google.com/drive/&emr=1" target="_blanc">Google РґРёСЃРє</a>&emsp;&bull;&ensp;
+<a href="https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://photos.google.com/login&followup=https://photos.google.com/login" target="_blanc">Google Р¤РѕС‚Рѕ</a>&emsp;&bull;&ensp;
+<a href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1" target="_blanc">РџРѕС‡С‚Р° GMail</a>&emsp;&bull;&ensp;
+<a href="https://e.mail.ru/cgi-bin/login" target="_blanc">РџРѕС‡С‚Р° Mail.ru</a>
 </td>
 <tr>
-<th>Карты</th>
+<th>РљР°СЂС‚С‹</th>
 <td class="url_cell">
-<a href="http://2gis.ru/ufa/zoom/11" target="_blanc">2ГИС - Уфа</a>&emsp;&bull;&ensp;
-<a href="http://maps.ufanet.ru/ufa#" target="_blanc">Веб-камеры - Уфа</a>
+<a href="http://2gis.ru/ufa/zoom/11" target="_blanc">2Р“РРЎ - РЈС„Р°</a>&emsp;&bull;&ensp;
+<a href="http://maps.ufanet.ru/ufa#" target="_blanc">Р’РµР±-РєР°РјРµСЂС‹ - РЈС„Р°</a>
 </td>
 <tr>
-<th>TV программа</th>
+<th>TV РїСЂРѕРіСЂР°РјРјР°</th>
 <td class="url_cell">
-<a href="https://tv.yandex.ru/172?grid=all&period=now" target="_blanc">ТВ Яндекс - Уфа</a>
+<a href="https://tv.yandex.ru/172?grid=all&period=now" target="_blanc">РўР’ РЇРЅРґРµРєСЃ - РЈС„Р°</a>
 </td>
 <tr>
-<th>Автомобили</th>
+<th>РђРІС‚РѕРјРѕР±РёР»Рё</th>
 <td class="url_cell">
-<a href="http://lanos-club.ru/forum/lofiversion/index.php/" target="_blanc">Форум Lanos/Sens/Chance клуба</a>&emsp;&bull;&ensp;
-<a href="https://inform.auto-parts.org.ua/%D0%BF%D1%80%D0%B5%D0%B4%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D0%B8-%D0%B8-%D1%80%D0%B5%D0%BB%D0%B5/" target="_blanc">Ланос - предохранители и реле</a>&emsp;&bull;&ensp;
-<a href="https://www.drive2.ru/l/454871534897464185/" target="_blanc">Ланос - размещение разъемов</a>&emsp;&bull;&ensp;
-<a href="https://www.automobiledimension.com/" target="_blanc">Габариты и фото автомобилей</a>&emsp;&bull;&ensp;
-<a href="https://carpedia.club/articles/Chevrolet/Lanos" target="_blanc">Carpedia - Chevrolet Lanos - Статьи</a>&emsp;&bull;&ensp;
-<a href="https://www.youtube.com/channel/UC8S11pZyXwoGH_hMI_9P4cw" target="_blanc">Андрей Смирнов - Обзоры шин</a>&emsp;&bull;&ensp;
-<a href="https://www.drive2.ru/l/471182515017613348/" target="_blanc">Глобальное ТО Lanos 10 лет (ГРМ и т.п.)</a>&emsp;&bull;&ensp;
-<a href="http://www.avtorem.info/stati/daewoo" target="_blanc">Ремонт автомобилей Daewoo своими руками</a>&emsp;&bull;&ensp;
-<a href="https://www.drive2.ru/r/chevrolet/lanos/492820/" target="_blanc">Chevrolet Lanos Парти3ан</a>&emsp;&bull;&ensp;
+<a href="http://lanos-club.ru/forum/lofiversion/index.php/" target="_blanc">Р¤РѕСЂСѓРј Lanos/Sens/Chance РєР»СѓР±Р°</a>&emsp;&bull;&ensp;
+<a href="https://inform.auto-parts.org.ua/%D0%BF%D1%80%D0%B5%D0%B4%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D0%B8-%D0%B8-%D1%80%D0%B5%D0%BB%D0%B5/" target="_blanc">Р›Р°РЅРѕСЃ - РїСЂРµРґРѕС…СЂР°РЅРёС‚РµР»Рё Рё СЂРµР»Рµ</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/l/454871534897464185/" target="_blanc">Р›Р°РЅРѕСЃ - СЂР°Р·РјРµС‰РµРЅРёРµ СЂР°Р·СЉРµРјРѕРІ</a>&emsp;&bull;&ensp;
+<a href="https://www.automobiledimension.com/" target="_blanc">Р“Р°Р±Р°СЂРёС‚С‹ Рё С„РѕС‚Рѕ Р°РІС‚РѕРјРѕР±РёР»РµР№</a>&emsp;&bull;&ensp;
+<a href="https://carpedia.club/articles/Chevrolet/Lanos" target="_blanc">Carpedia - Chevrolet Lanos - РЎС‚Р°С‚СЊРё</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UC8S11pZyXwoGH_hMI_9P4cw" target="_blanc">РђРЅРґСЂРµР№ РЎРјРёСЂРЅРѕРІ - РћР±Р·РѕСЂС‹ С€РёРЅ</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/l/471182515017613348/" target="_blanc">Р“Р»РѕР±Р°Р»СЊРЅРѕРµ РўРћ Lanos 10 Р»РµС‚ (Р“Р Рњ Рё С‚.Рї.)</a>&emsp;&bull;&ensp;
+<a href="http://www.avtorem.info/stati/daewoo" target="_blanc">Р РµРјРѕРЅС‚ Р°РІС‚РѕРјРѕР±РёР»РµР№ Daewoo СЃРІРѕРёРјРё СЂСѓРєР°РјРё</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/r/chevrolet/lanos/492820/" target="_blanc">Chevrolet Lanos РџР°СЂС‚Рё3Р°РЅ</a>&emsp;&bull;&ensp;
 <a href="https://www.drive2.ru/r/chevrolet/4899916394579123182/" target="_blanc">Chevrolet Lanos Black Edition</a>&emsp;&bull;&ensp;
-<a href="https://www.drive2.ru/r/daewoo/4053239664633480167/logbook/?page=1#pager" target="_blanc">Daewoo Lanos › Бортжурнал</a>&emsp;&bull;&ensp;
-<a href="https://www.drive2.ru/users/zatoichi1463/#blog" target="_blanc">За Правду: Блог о запчастях</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/r/daewoo/4053239664633480167/logbook/?page=1#pager" target="_blanc">Daewoo Lanos вЂє Р‘РѕСЂС‚Р¶СѓСЂРЅР°Р»</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/users/zatoichi1463/#blog" target="_blanc">Р—Р° РџСЂР°РІРґСѓ: Р‘Р»РѕРі Рѕ Р·Р°РїС‡Р°СЃС‚СЏС…</a>&emsp;&bull;&ensp;
 </td>
 <tr>
-<th>Ремонт</th>
+<th>Р РµРјРѕРЅС‚</th>
 <td class="url_cell">
-<a href="https://www.youtube.com/channel/UCC-_M8rGtIII1jrUodL8sGw" target="_blanc">Ремонт и Отделка Youtube</a>&emsp;&bull;&ensp;
-<a href="https://www.youtube.com/channel/UCMb3YscxDOo7rgJ-AvrCXdw" target="_blanc">MY GALAXY Своими руками Youtube</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UCC-_M8rGtIII1jrUodL8sGw" target="_blanc">Р РµРјРѕРЅС‚ Рё РћС‚РґРµР»РєР° Youtube</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UCMb3YscxDOo7rgJ-AvrCXdw" target="_blanc">MY GALAXY РЎРІРѕРёРјРё СЂСѓРєР°РјРё Youtube</a>&emsp;&bull;&ensp;
 </td>
 <tr>
-<th>Полезные ссылки</th>
+<th>РџРѕР»РµР·РЅС‹Рµ СЃСЃС‹Р»РєРё</th>
 <td class="url_cell">
-<a href="https://mcgrp.ru/" target="_blanc">Инструкции по эксплуатации - Макгруп</a>&emsp;&bull;&ensp;
-<a href="https://kinofakt.blogspot.com/" target="_blanc">Кино - факты и ляпы</a>&emsp;&bull;&ensp;
-<a href="http://rutracker.org/" target="_blanc">Торрент Rutracker.org</a>&emsp;&bull;&ensp;
-<a href="http://filmpotok.ru/new-films/2028.html" target="_blanc">Торрент FilmPotok.RU</a>&emsp;&bull;&ensp;
-<a href="http://filmitorrent.org/" target="_blanc">Торрент фильмы</a>&emsp;&bull;&ensp;
-<a href="http://cinematext.ru/" target="_blanc">Тексты фильмов</a>&emsp;&bull;&ensp;
-<a href="https://givemp3.com/" target="_blanc">Скачать музыку бесплатно</a>&emsp;&bull;&ensp;
-<a href="https://sefon.me/" target="_blanc">Музыкальный портал Sefon.me</a>&emsp;&bull;&ensp;
-<a href="https://mp3ringtony.ru/besplatnye_ringtony" target="_blanc">Бесплатные рингтоны</a>&emsp;&bull;&ensp;
-<a href="http://www.zabaznov.ru/strauss/muz/index2.htm" target="_blanc">Произведения Иоганна Штрауса (сына)</a>&emsp;&bull;&ensp;
-<a href="http://torrent-baza.net/filmy/" target="_blanc">Торрент новые фильмы</a>&emsp;&bull;&ensp;
-<a href="http://www.popmech.ru/" target="_blanc">Популярная механика</a>&emsp;&bull;&ensp;
-<a href="http://russianfood.com/recipes/" target="_blanc">Рецепты на RussianFood</a>&emsp;&bull;&ensp;
-<a href="https://www.youtube.com/channel/UC9oPSmSF4Jc23AQNwuiFbqA" target="_blanc">Твоя идея ТВ</a>&emsp;&bull;&ensp;
-<a href="https://www.youtube.com/channel/UCyirmMGvGxX8T4jK7CRCZhA" target="_blanc">НОРМ ОБЗОР</a>&emsp;&bull;&ensp;
-<a href="https://www.gazeta.ru/comments/column/mironova/" target="_blanc">Анастасия Миронова</a>&emsp;&bull;&ensp;
-<a href="https://www.novayagazeta.ru/authors/61" target="_blanc">Алексей Поликовский</a>&emsp;&bull;&ensp;
-<a href="http://m.kino-teatr.ru/search/" target="_blanc">Кино театр</a>&emsp;&bull;&ensp;
-<a href="https://www.youtube.com/playlist?list=PLPQMS4LWmn9MGchtzO3DfNT--CaACFaVJ" target="_blanc">Тестирование NiMH, NiZn аккумуляторов</a>&emsp;&bull;&ensp;
+<a href="https://mcgrp.ru/" target="_blanc">РРЅСЃС‚СЂСѓРєС†РёРё РїРѕ СЌРєСЃРїР»СѓР°С‚Р°С†РёРё - РњР°РєРіСЂСѓРї</a>&emsp;&bull;&ensp;
+<a href="https://kinofakt.blogspot.com/" target="_blanc">РљРёРЅРѕ - С„Р°РєС‚С‹ Рё Р»СЏРїС‹</a>&emsp;&bull;&ensp;
+<a href="http://rutracker.org/" target="_blanc">РўРѕСЂСЂРµРЅС‚ Rutracker.org</a>&emsp;&bull;&ensp;
+<a href="http://filmpotok.ru/new-films/2028.html" target="_blanc">РўРѕСЂСЂРµРЅС‚ FilmPotok.RU</a>&emsp;&bull;&ensp;
+<a href="http://filmitorrent.org/" target="_blanc">РўРѕСЂСЂРµРЅС‚ С„РёР»СЊРјС‹</a>&emsp;&bull;&ensp;
+<a href="http://cinematext.ru/" target="_blanc">РўРµРєСЃС‚С‹ С„РёР»СЊРјРѕРІ</a>&emsp;&bull;&ensp;
+<a href="https://givemp3.com/" target="_blanc">РЎРєР°С‡Р°С‚СЊ РјСѓР·С‹РєСѓ Р±РµСЃРїР»Р°С‚РЅРѕ</a>&emsp;&bull;&ensp;
+<a href="https://sefon.me/" target="_blanc">РњСѓР·С‹РєР°Р»СЊРЅС‹Р№ РїРѕСЂС‚Р°Р» Sefon.me</a>&emsp;&bull;&ensp;
+<a href="https://mp3ringtony.ru/besplatnye_ringtony" target="_blanc">Р‘РµСЃРїР»Р°С‚РЅС‹Рµ СЂРёРЅРіС‚РѕРЅС‹</a>&emsp;&bull;&ensp;
+<a href="http://www.zabaznov.ru/strauss/muz/index2.htm" target="_blanc">РџСЂРѕРёР·РІРµРґРµРЅРёСЏ РРѕРіР°РЅРЅР° РЁС‚СЂР°СѓСЃР° (СЃС‹РЅР°)</a>&emsp;&bull;&ensp;
+<a href="http://torrent-baza.net/filmy/" target="_blanc">РўРѕСЂСЂРµРЅС‚ РЅРѕРІС‹Рµ С„РёР»СЊРјС‹</a>&emsp;&bull;&ensp;
+<a href="http://www.popmech.ru/" target="_blanc">РџРѕРїСѓР»СЏСЂРЅР°СЏ РјРµС…Р°РЅРёРєР°</a>&emsp;&bull;&ensp;
+<a href="http://russianfood.com/recipes/" target="_blanc">Р РµС†РµРїС‚С‹ РЅР° RussianFood</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UC9oPSmSF4Jc23AQNwuiFbqA" target="_blanc">РўРІРѕСЏ РёРґРµСЏ РўР’</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UCyirmMGvGxX8T4jK7CRCZhA" target="_blanc">РќРћР Рњ РћР‘Р—РћР </a>&emsp;&bull;&ensp;
+<a href="https://www.gazeta.ru/comments/column/mironova/" target="_blanc">РђРЅР°СЃС‚Р°СЃРёСЏ РњРёСЂРѕРЅРѕРІР°</a>&emsp;&bull;&ensp;
+<a href="https://www.novayagazeta.ru/authors/61" target="_blanc">РђР»РµРєСЃРµР№ РџРѕР»РёРєРѕРІСЃРєРёР№</a>&emsp;&bull;&ensp;
+<a href="http://m.kino-teatr.ru/search/" target="_blanc">РљРёРЅРѕ С‚РµР°С‚СЂ</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/playlist?list=PLPQMS4LWmn9MGchtzO3DfNT--CaACFaVJ" target="_blanc">РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ NiMH, NiZn Р°РєРєСѓРјСѓР»СЏС‚РѕСЂРѕРІ</a>&emsp;&bull;&ensp;
 </td>
 <tr>
-<th>Политика</th>
+<th>РџРѕР»РёС‚РёРєР°</th>
 <td class="url_cell">
-<a href="http://vassermans.ru/" target="_blanc">Вассерман</a>&emsp;&bull;&ensp;
-<a href="https://www.youtube.com/channel/UCdY2JiM8GgQAxxchaz-zeEQ" target="_blanc">Хроники Армагеддона</a>&emsp;&bull;&ensp;
-<a href="http://izvestia.ru/search?search=%D0%90%D0%BD%D1%82%D0%BE%D0%BD+%D0%A5%D0%B0%D1%89%D0%B5%D0%BD%D0%BA%D0%BE" target="_blanc">Антон Хащенко</a>&emsp;&bull;&ensp;
-<a href="http://izvestia.ru/search?search=%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9+%D0%9C%D0%B0%D0%BD%D0%BE%D0%B9%D0%BB%D0%BE" target="_blanc">Андрей Манойло</a>&emsp;&bull;&ensp;
-<a href="http://ren.tv/blog/84946" target="_blanc">Дмитрий Чистилин</a>&emsp;&bull;&ensp;
-<a href="http://izvestia.ru/search?search=%D0%A0%D0%BE%D1%81%D1%82%D0%B8%D1%81%D0%BB%D0%B0%D0%B2+%D0%98%D1%89%D0%B5%D0%BD%D0%BA%D0%BE" target="_blanc">Ростислав Ищенко</a>&emsp;&bull;&ensp;
-<a href="http://ren.tv/blog/4615" target="_blanc">Андрей Добров</a>&emsp;&bull;&ensp;
-<a href="https://ria.ru/authors/danilov/" target="_blanc">Иван Данилов, автор блога Crimson Alter</a>&emsp;&bull;&ensp;
-<a href="http://www.gazeta.ru/comments/column/lukyanov/" target="_blanc">Федор Лукьянов</a>
+<a href="http://vassermans.ru/" target="_blanc">Р’Р°СЃСЃРµСЂРјР°РЅ</a>&emsp;&bull;&ensp;
+<a href="https://www.youtube.com/channel/UCdY2JiM8GgQAxxchaz-zeEQ" target="_blanc">РҐСЂРѕРЅРёРєРё РђСЂРјР°РіРµРґРґРѕРЅР°</a>&emsp;&bull;&ensp;
+<a href="http://izvestia.ru/search?search=%D0%90%D0%BD%D1%82%D0%BE%D0%BD+%D0%A5%D0%B0%D1%89%D0%B5%D0%BD%D0%BA%D0%BE" target="_blanc">РђРЅС‚РѕРЅ РҐР°С‰РµРЅРєРѕ</a>&emsp;&bull;&ensp;
+<a href="http://izvestia.ru/search?search=%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9+%D0%9C%D0%B0%D0%BD%D0%BE%D0%B9%D0%BB%D0%BE" target="_blanc">РђРЅРґСЂРµР№ РњР°РЅРѕР№Р»Рѕ</a>&emsp;&bull;&ensp;
+<a href="http://ren.tv/blog/84946" target="_blanc">Р”РјРёС‚СЂРёР№ Р§РёСЃС‚РёР»РёРЅ</a>&emsp;&bull;&ensp;
+<a href="http://izvestia.ru/search?search=%D0%A0%D0%BE%D1%81%D1%82%D0%B8%D1%81%D0%BB%D0%B0%D0%B2+%D0%98%D1%89%D0%B5%D0%BD%D0%BA%D0%BE" target="_blanc">Р РѕСЃС‚РёСЃР»Р°РІ РС‰РµРЅРєРѕ</a>&emsp;&bull;&ensp;
+<a href="http://ren.tv/blog/4615" target="_blanc">РђРЅРґСЂРµР№ Р”РѕР±СЂРѕРІ</a>&emsp;&bull;&ensp;
+<a href="https://ria.ru/authors/danilov/" target="_blanc">РРІР°РЅ Р”Р°РЅРёР»РѕРІ, Р°РІС‚РѕСЂ Р±Р»РѕРіР° Crimson Alter</a>&emsp;&bull;&ensp;
+<a href="http://www.gazeta.ru/comments/column/lukyanov/" target="_blanc">Р¤РµРґРѕСЂ Р›СѓРєСЊСЏРЅРѕРІ</a>
 </td>
 </table>
 </DIV>
@@ -445,94 +445,94 @@ function change_visibility2 (block_4_close, block_4_open) {
 <br>
 <div class="head_div">
 <a name="3" href="javascript:void(0);" onclick="viewdiv('mydiv4');" onmouseover="setbackcolor(this,1)" onmouseout="setbackcolor(this,0)">
-Магазины
+РњР°РіР°Р·РёРЅС‹
 </a>
 </div>
 <DIV id="mydiv4" class="tab_div">
 <table border="1" cellspacing="0" cellpadding="4" >
 <tr>
-<th>Авто</th>
+<th>РђРІС‚Рѕ</th>
 <td class="url_cell">
-<a href="http://евроавто.рф/parts/chevrolet/lanos-2004-2010/" target="_blanc">ЕвроАвто - б/у з/ч Lanos</a>&emsp;&bull;&ensp;
-<a href="http://www.autodoc.ru/" target="_blanc">Autodoc.ru - автозапчасти</a>&emsp;&bull;&ensp;
-<a href="https://www.drive2.ru/l/484311233609073224/?page=1#comments" target="_blanc">Autodoc.ru - коды поставщиков</a>&emsp;&bull;&ensp;
-<a href="http://ufa.vseinstrumenti.ru/?gclid=CJnGnrDnodYCFVnPsgod5HUBQQ" target="_blanc">ВсеИнструменты.Ру</a>&emsp;&bull;&ensp;
-<a href="http://www.autokorufa.ru/" target="_blanc">АвтоКор</a>&emsp;&bull;&ensp;
-<a href="http://zapchasti-ufa.ru/content/view/36/67/" target="_blanc">АвтоДисконт</a>&emsp;&bull;&ensp;
-<a href="https://auto.ru/cars/evaluation/?from=main" target="_blanc">Оценка автомобиля Auto.ru</a>&emsp;&bull;&ensp;
-<a href="https://multigo.ru/benzin/54.7363580;55.9908150/8" target="_blanc">Поиск АЗС</a>&emsp;&bull;&ensp;
+<a href="http://РµРІСЂРѕР°РІС‚Рѕ.СЂС„/parts/chevrolet/lanos-2004-2010/" target="_blanc">Р•РІСЂРѕРђРІС‚Рѕ - Р±/Сѓ Р·/С‡ Lanos</a>&emsp;&bull;&ensp;
+<a href="http://www.autodoc.ru/" target="_blanc">Autodoc.ru - Р°РІС‚РѕР·Р°РїС‡Р°СЃС‚Рё</a>&emsp;&bull;&ensp;
+<a href="https://www.drive2.ru/l/484311233609073224/?page=1#comments" target="_blanc">Autodoc.ru - РєРѕРґС‹ РїРѕСЃС‚Р°РІС‰РёРєРѕРІ</a>&emsp;&bull;&ensp;
+<a href="http://ufa.vseinstrumenti.ru/?gclid=CJnGnrDnodYCFVnPsgod5HUBQQ" target="_blanc">Р’СЃРµРРЅСЃС‚СЂСѓРјРµРЅС‚С‹.Р Сѓ</a>&emsp;&bull;&ensp;
+<a href="http://www.autokorufa.ru/" target="_blanc">РђРІС‚РѕРљРѕСЂ</a>&emsp;&bull;&ensp;
+<a href="http://zapchasti-ufa.ru/content/view/36/67/" target="_blanc">РђРІС‚РѕР”РёСЃРєРѕРЅС‚</a>&emsp;&bull;&ensp;
+<a href="https://auto.ru/cars/evaluation/?from=main" target="_blanc">РћС†РµРЅРєР° Р°РІС‚РѕРјРѕР±РёР»СЏ Auto.ru</a>&emsp;&bull;&ensp;
+<a href="https://multigo.ru/benzin/54.7363580;55.9908150/8" target="_blanc">РџРѕРёСЃРє РђР—РЎ</a>&emsp;&bull;&ensp;
 </td>
 <tr>
-<th>Аптеки</th>
+<th>РђРїС‚РµРєРё</th>
 <td class="url_cell">
-<a href="https://apteka.ru/" target="_blanc">сервис Аптека.ру</a>&emsp;&bull;&ensp;
-<a href="http://ufa.pharmacevtika.ru/" target="_blanc">Поиск лекарств в аптеках Уфы</a>
+<a href="https://apteka.ru/" target="_blanc">СЃРµСЂРІРёСЃ РђРїС‚РµРєР°.СЂСѓ</a>&emsp;&bull;&ensp;
+<a href="http://ufa.pharmacevtika.ru/" target="_blanc">РџРѕРёСЃРє Р»РµРєР°СЂСЃС‚РІ РІ Р°РїС‚РµРєР°С… РЈС„С‹</a>
 </td>
 <tr>
-<th>Электроника.Бытовая техника</th>
+<th>Р­Р»РµРєС‚СЂРѕРЅРёРєР°.Р‘С‹С‚РѕРІР°СЏ С‚РµС…РЅРёРєР°</th>
 <td class="url_cell">
-<a href="https://technopoint.ru/" target="_blanc">DNS Технопоинт</a>&emsp;&bull;&ensp;
-<a href="https://www.computermarket.ru/main/catalog/catid/default.aspx" target="_blanc">КомпьютерМаркет</a>&emsp;&bull;&ensp;
-<a href="http://enecrosse.ru/" target="_blanc">Интернет-магазин батареек и ЗУ - EneCrosse.ru</a>&emsp;&bull;&ensp;
+<a href="https://technopoint.ru/" target="_blanc">DNS РўРµС…РЅРѕРїРѕРёРЅС‚</a>&emsp;&bull;&ensp;
+<a href="https://www.computermarket.ru/main/catalog/catid/default.aspx" target="_blanc">РљРѕРјРїСЊСЋС‚РµСЂРњР°СЂРєРµС‚</a>&emsp;&bull;&ensp;
+<a href="http://enecrosse.ru/" target="_blanc">РРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅ Р±Р°С‚Р°СЂРµРµРє Рё Р—РЈ - EneCrosse.ru</a>&emsp;&bull;&ensp;
 <a href="https://ufa.rbt.ru/?gclid=EAIaIQobChMIl9qCweCR3AIVCGQZCh04WQxOEAAYASAAEgIEwPD_BwE&region=16&utm_referrer=" target="_blanc">RBT</a>&emsp;&bull;&ensp;
 <a href="http://ufa.e96.ru/" target="_blanc">E96.RU</a>&emsp;&bull;&ensp;
-<a href="https://www.onlinetrade.ru/" target="_blanc">ОНЛАЙН Трейд</a>&emsp;&bull;&ensp;
-<a href="https://www.citilink.ru/" target="_blanc">Ситилинк</a>&emsp;&bull;&ensp;
-<a href="http://gc-progress.com/" target="_blanc">Прогресс</a>&emsp;&bull;&ensp;
-<a href="https://elkomp.ru/" target="_blanc">Мир электроники</a>&emsp;&bull;&ensp;
-<a href="http://electronica.bashel.ru/" target="_blanc">Электроника</a>&emsp;&bull;&ensp;
-<a href="https://www.chipdip.ru/shops/ufa-mendeleyeva-145" target="_blanc">ЧИП и ДИП - интернет-магазин радиодеталей, приборов и электронных компонентов</a>&emsp;&bull;&ensp;
-<a href="http://ufa.mvideo.ru/?reff=google_cpc_rim_image_name_priority1_ufa&gclid=CJix1N3xjrwCFcFa3godR2AAEw" target="_blanc">М-Видео</a>&emsp;&bull;&ensp;
-<a href="http://www.technonet.ru/" target="_blanc">ТЕХНО</a>&emsp;&bull;&ensp;
-<a href="http://www.fotosklad.ru/catalog/" target="_blanc">Фотосклад</a>
+<a href="https://www.onlinetrade.ru/" target="_blanc">РћРќР›РђР™Рќ РўСЂРµР№Рґ</a>&emsp;&bull;&ensp;
+<a href="https://www.citilink.ru/" target="_blanc">РЎРёС‚РёР»РёРЅРє</a>&emsp;&bull;&ensp;
+<a href="http://gc-progress.com/" target="_blanc">РџСЂРѕРіСЂРµСЃСЃ</a>&emsp;&bull;&ensp;
+<a href="https://elkomp.ru/" target="_blanc">РњРёСЂ СЌР»РµРєС‚СЂРѕРЅРёРєРё</a>&emsp;&bull;&ensp;
+<a href="http://electronica.bashel.ru/" target="_blanc">Р­Р»РµРєС‚СЂРѕРЅРёРєР°</a>&emsp;&bull;&ensp;
+<a href="https://www.chipdip.ru/shops/ufa-mendeleyeva-145" target="_blanc">Р§РРџ Рё Р”РРџ - РёРЅС‚РµСЂРЅРµС‚-РјР°РіР°Р·РёРЅ СЂР°РґРёРѕРґРµС‚Р°Р»РµР№, РїСЂРёР±РѕСЂРѕРІ Рё СЌР»РµРєС‚СЂРѕРЅРЅС‹С… РєРѕРјРїРѕРЅРµРЅС‚РѕРІ</a>&emsp;&bull;&ensp;
+<a href="http://ufa.mvideo.ru/?reff=google_cpc_rim_image_name_priority1_ufa&gclid=CJix1N3xjrwCFcFa3godR2AAEw" target="_blanc">Рњ-Р’РёРґРµРѕ</a>&emsp;&bull;&ensp;
+<a href="http://www.technonet.ru/" target="_blanc">РўР•РҐРќРћ</a>&emsp;&bull;&ensp;
+<a href="http://www.fotosklad.ru/catalog/" target="_blanc">Р¤РѕС‚РѕСЃРєР»Р°Рґ</a>
 </td>
 <tr>
-<th>Компьютерные</th>
+<th>РљРѕРјРїСЊСЋС‚РµСЂРЅС‹Рµ</th>
 <td class="url_cell">
-<a href="http://www.dns-shop.ru/" target="_blanc">DNS Уфа</a>&emsp;&bull;&ensp;
-<a href="http://fvd.ru/" target="_blanc">Форте-ВД</a>&emsp;&bull;&ensp;
-<a href="http://www.fermo.ru/#" target="_blanc">ФЕРМО</a>
+<a href="http://www.dns-shop.ru/" target="_blanc">DNS РЈС„Р°</a>&emsp;&bull;&ensp;
+<a href="http://fvd.ru/" target="_blanc">Р¤РѕСЂС‚Рµ-Р’Р”</a>&emsp;&bull;&ensp;
+<a href="http://www.fermo.ru/#" target="_blanc">Р¤Р•Р РњРћ</a>
 </td>
 <tr>
-<th>Спорттовары</th>
+<th>РЎРїРѕСЂС‚С‚РѕРІР°СЂС‹</th>
 <td class="url_cell">
-<a href="http://www.sportmaster.ru/?nomobile=1&gclid=CI3g_9vv7MsCFYHVcgodU18BaA" target="_blanc">СпортМастер - Уфа</a>&emsp;&bull;&ensp;
-<a href="http://www.championnet.ru/" target="_blanc">Чемпион</a>&emsp;&bull;&ensp;
-<a href="http://www.luchski.ru/" target="_blanc">Луч (Ект.)</a>
+<a href="http://www.sportmaster.ru/?nomobile=1&gclid=CI3g_9vv7MsCFYHVcgodU18BaA" target="_blanc">РЎРїРѕСЂС‚РњР°СЃС‚РµСЂ - РЈС„Р°</a>&emsp;&bull;&ensp;
+<a href="http://www.championnet.ru/" target="_blanc">Р§РµРјРїРёРѕРЅ</a>&emsp;&bull;&ensp;
+<a href="http://www.luchski.ru/" target="_blanc">Р›СѓС‡ (Р•РєС‚.)</a>
 </td>
 <tr>
-<th>Стройматериалы и ремонт</th>
+<th>РЎС‚СЂРѕР№РјР°С‚РµСЂРёР°Р»С‹ Рё СЂРµРјРѕРЅС‚</th>
 <td class="url_cell">
-<a href="https://ufa.leroymerlin.ru/" target="_blanc">Leroy Merlin - Уфа</a>&emsp;&bull;&ensp;
-<a href="https://ufa.stroylandiya.ru/" target="_blanc">Стройландия</a>&emsp;&bull;&ensp;
-<a href="https://ufa.esmag.ru/?geocity=%D0%A3%D1%84%D0%B0&city_confirm=1" target="_blanc">Сантехника ESMAG - Уфа</a>&emsp;&bull;&ensp;
-<a href="https://santehgrad.com/" target="_blanc">Сантехград - Уфа</a>&emsp;&bull;&ensp;
-<a href="https://лесоптторгуфа.рф/catalog/" target="_blanc">ЛесОптТорг</a>&emsp;&bull;&ensp;
-<a href="https://yadachnik.ru/" target="_blanc">Дачник</a>&emsp;&bull;&ensp;
-<a href="http://www.ok-stroy.ru/" target="_blanc">ОК-Стройматериалы</a>&emsp;&bull;&ensp;
-<a href="http://ufa-les.ru/" target="_blanc">УфаСтройСнаб - пиломатериалы</a>&emsp;&bull;&ensp;
-<a href="http://bls-ufa.ru/" target="_blanc">БашЛесСтрой - пиломатериалы</a>&emsp;&bull;&ensp;
-<a href="http://www.skladmagazin102.ru/" target="_blanc">АЙРОНСТРОЙ Уфа</a>&emsp;&bull;&ensp;
-<a href="http://profnastil-rb.ru/lp/shtaketnik.php" target="_blanc">Профнастил, Сайдинг, Евроштакетник</a>&emsp;&bull;&ensp;
+<a href="https://ufa.leroymerlin.ru/" target="_blanc">Leroy Merlin - РЈС„Р°</a>&emsp;&bull;&ensp;
+<a href="https://ufa.stroylandiya.ru/" target="_blanc">РЎС‚СЂРѕР№Р»Р°РЅРґРёСЏ</a>&emsp;&bull;&ensp;
+<a href="https://ufa.esmag.ru/?geocity=%D0%A3%D1%84%D0%B0&city_confirm=1" target="_blanc">РЎР°РЅС‚РµС…РЅРёРєР° ESMAG - РЈС„Р°</a>&emsp;&bull;&ensp;
+<a href="https://santehgrad.com/" target="_blanc">РЎР°РЅС‚РµС…РіСЂР°Рґ - РЈС„Р°</a>&emsp;&bull;&ensp;
+<a href="https://Р»РµСЃРѕРїС‚С‚РѕСЂРіСѓС„Р°.СЂС„/catalog/" target="_blanc">Р›РµСЃРћРїС‚РўРѕСЂРі</a>&emsp;&bull;&ensp;
+<a href="https://yadachnik.ru/" target="_blanc">Р”Р°С‡РЅРёРє</a>&emsp;&bull;&ensp;
+<a href="http://www.ok-stroy.ru/" target="_blanc">РћРљ-РЎС‚СЂРѕР№РјР°С‚РµСЂРёР°Р»С‹</a>&emsp;&bull;&ensp;
+<a href="http://ufa-les.ru/" target="_blanc">РЈС„Р°РЎС‚СЂРѕР№РЎРЅР°Р± - РїРёР»РѕРјР°С‚РµСЂРёР°Р»С‹</a>&emsp;&bull;&ensp;
+<a href="http://bls-ufa.ru/" target="_blanc">Р‘Р°С€Р›РµСЃРЎС‚СЂРѕР№ - РїРёР»РѕРјР°С‚РµСЂРёР°Р»С‹</a>&emsp;&bull;&ensp;
+<a href="http://www.skladmagazin102.ru/" target="_blanc">РђР™Р РћРќРЎРўР РћР™ РЈС„Р°</a>&emsp;&bull;&ensp;
+<a href="http://profnastil-rb.ru/lp/shtaketnik.php" target="_blanc">РџСЂРѕС„РЅР°СЃС‚РёР», РЎР°Р№РґРёРЅРі, Р•РІСЂРѕС€С‚Р°РєРµС‚РЅРёРє</a>&emsp;&bull;&ensp;
 </td>
 <tr>
-<th>Мебель и др.</th>
+<th>РњРµР±РµР»СЊ Рё РґСЂ.</th>
 <td class="url_cell">
-<a href="https://www.techport.ru/" target="_blanc">TechPort - Интернет-гипермаркет выгодных покупок</a>&emsp;&bull;&ensp;
+<a href="https://www.techport.ru/" target="_blanc">TechPort - РРЅС‚РµСЂРЅРµС‚-РіРёРїРµСЂРјР°СЂРєРµС‚ РІС‹РіРѕРґРЅС‹С… РїРѕРєСѓРїРѕРє</a>&emsp;&bull;&ensp;
 </td>
 <tr>
-<th>Интернет</th>
+<th>РРЅС‚РµСЂРЅРµС‚</th>
 <td class="url_cell">
 <a href="https://www.avito.ru/" target="_blanc">Avito</a>&emsp;&bull;&ensp;
 <a href="https://login.aliexpress.com/?returnUrl=https%3A%2F%2Ftrade.aliexpress.com%2ForderList.htm%3Fspm%3Da2g0o.home.01010.4.74a72a45OGhMbk%26tsp%3D1555304107902" target="_blanc">AliExpress</a>&emsp;&bull;&ensp;
-<a href="https://www.pochta.ru/TRACKING" target="_blanc">Отслеживание посылки - Почта России</a>&emsp;&bull;&ensp;
-<a href="https://gdeposylka.ru/" target="_blanc">Отслеживание посылки - ГдеПосылка</a>&emsp;&bull;&ensp;
-<a href="http://hvastik.com/h2/proverit-prodavca-aliexpress" target="_blanc">Проверка продавца на Aliexpress</a>&emsp;&bull;&ensp;
-<a href="http://www.alimonitor.ru/" target="_blanc">Поиск отзывов о продавцах и товарах на Aliexpress</a>&emsp;&bull;&ensp;
+<a href="https://www.pochta.ru/TRACKING" target="_blanc">РћС‚СЃР»РµР¶РёРІР°РЅРёРµ РїРѕСЃС‹Р»РєРё - РџРѕС‡С‚Р° Р РѕСЃСЃРёРё</a>&emsp;&bull;&ensp;
+<a href="https://gdeposylka.ru/" target="_blanc">РћС‚СЃР»РµР¶РёРІР°РЅРёРµ РїРѕСЃС‹Р»РєРё - Р“РґРµРџРѕСЃС‹Р»РєР°</a>&emsp;&bull;&ensp;
+<a href="http://hvastik.com/h2/proverit-prodavca-aliexpress" target="_blanc">РџСЂРѕРІРµСЂРєР° РїСЂРѕРґР°РІС†Р° РЅР° Aliexpress</a>&emsp;&bull;&ensp;
+<a href="http://www.alimonitor.ru/" target="_blanc">РџРѕРёСЃРє РѕС‚Р·С‹РІРѕРІ Рѕ РїСЂРѕРґР°РІС†Р°С… Рё С‚РѕРІР°СЂР°С… РЅР° Aliexpress</a>&emsp;&bull;&ensp;
 <a href="https://kazanexpress.ru/" target="_blanc">KazanExpress</a>&emsp;&bull;&ensp;
 <a href="https://www.ozon.ru/my/orderlist/?rnd=list" target="_blanc">OZON.ru</a>&emsp;&bull;&ensp;
 <a href="https://my-shop.ru/" target="_blanc">MyShop</a>&emsp;&bull;&ensp;
-<a href="https://susiman.ru/" target="_blanc">Магазин «Сушиман»</a>&emsp;&bull;&ensp;
+<a href="https://susiman.ru/" target="_blanc">РњР°РіР°Р·РёРЅ В«РЎСѓС€РёРјР°РЅВ»</a>&emsp;&bull;&ensp;
 </td>
 </table>
 </DIV>
@@ -540,14 +540,14 @@ function change_visibility2 (block_4_close, block_4_open) {
 <br>
 <div class="head_div">
 <a name="4" href="javascript:void(0);" onclick="viewdiv('mydiv5');" onmouseover="setbackcolor(this,1)" onmouseout="setbackcolor(this,0)">
-Программирование
+РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ
 </a>
 </div>
 
 <DIV id="mydiv5" class="tab_div">
 <table border="1" cellspacing="0" cellpadding="4" >
 <tr>
-<th>Базы данных</th>
+<th>Р‘Р°Р·С‹ РґР°РЅРЅС‹С…</th>
 <td class="url_cell">
 <a href="http://www.sqlite.org/lang.html" target="_blanc">SQLite</a>&emsp;&bull;&ensp;
 <a href="http://www.firststeps.ru/sql/oracle/oracle1.html" target="_blanc">Oracle FirstSteps</a>&emsp;&bull;&ensp;
@@ -556,76 +556,76 @@ function change_visibility2 (block_4_close, block_4_open) {
 <th>Oracle</th>
 <td class="url_cell">
 <a href="http://localhost:8080/apex" target="_blanc">Oracle XE admin page</a>&emsp;&bull;&ensp;
-<a href="http://oraclestart.blogspot.ru/" target="_blanc">Оракл для начинающих</a>&emsp;&bull;&ensp;
-<a href="https://iusoltsev.wordpress.com/profile/individual-sql-and-cbo/cbo-hints/" target="_blanc">Подсказки Oracle Hints</a>&emsp;&bull;&ensp;
-<a href="http://apps-oracle.ru/regular_expression-2/" target="_blanc">Регулярные выражения в Oracle</a>&emsp;&bull;&ensp;
-<a href="http://www.intuit.ru/studies/courses/537/393/info" target="_blanc">Разработка Web-приложений в Oracle Forms: НОУ ИНТУИТ</a>&emsp;&bull;&ensp;
-<a href="http://subscribe.ru/catalog/industry.comp.oracle" target="_blanc">Рассылка по Oracle Forms, Reports</a>&emsp;&bull;&ensp;
+<a href="http://oraclestart.blogspot.ru/" target="_blanc">РћСЂР°РєР» РґР»СЏ РЅР°С‡РёРЅР°СЋС‰РёС…</a>&emsp;&bull;&ensp;
+<a href="https://iusoltsev.wordpress.com/profile/individual-sql-and-cbo/cbo-hints/" target="_blanc">РџРѕРґСЃРєР°Р·РєРё Oracle Hints</a>&emsp;&bull;&ensp;
+<a href="http://apps-oracle.ru/regular_expression-2/" target="_blanc">Р РµРіСѓР»СЏСЂРЅС‹Рµ РІС‹СЂР°Р¶РµРЅРёСЏ РІ Oracle</a>&emsp;&bull;&ensp;
+<a href="http://www.intuit.ru/studies/courses/537/393/info" target="_blanc">Р Р°Р·СЂР°Р±РѕС‚РєР° Web-РїСЂРёР»РѕР¶РµРЅРёР№ РІ Oracle Forms: РќРћРЈ РРќРўРЈРРў</a>&emsp;&bull;&ensp;
+<a href="http://subscribe.ru/catalog/industry.comp.oracle" target="_blanc">Р Р°СЃСЃС‹Р»РєР° РїРѕ Oracle Forms, Reports</a>&emsp;&bull;&ensp;
 <a href="http://subscribe.ru/catalog/industry.comp.oracle" target="_blanc" target="_blanc">Oracle Docs - Work with the Report Layout</a>&emsp;&bull;&ensp; 
 <a href="https://www.codecrete.net/UnwrapIt/" target="_blanc" target="_blanc">Unwrap Oracle code</a>&emsp;&bull;&ensp; 
 </td>
 <tr>
 <th>Desktop</th>
 <td class="url_cell">
-<a href="http://cppstudio.com/cat/274/" target="_blanc">Язык программирования С++</a>&emsp;&bull;&ensp;
-<a href="http://www.cplusplus.com/" target="_blanc">С++ Reference, Tutorials</a>&emsp;&bull;&ensp;
-<a href="http://qaru.site/questions/13923/how-to-determine-cpu-and-memory-consumption-from-inside-a-process" target="_blanc">С++ Потребление памяти м ЦП приложением</a>&emsp;&bull;&ensp;
-<a href="http://doc.crossplatform.ru/" target="_blanc">Qt документация</a>&emsp;&bull;&ensp;
+<a href="http://cppstudio.com/cat/274/" target="_blanc">РЇР·С‹Рє РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ РЎ++</a>&emsp;&bull;&ensp;
+<a href="http://www.cplusplus.com/" target="_blanc">РЎ++ Reference, Tutorials</a>&emsp;&bull;&ensp;
+<a href="http://qaru.site/questions/13923/how-to-determine-cpu-and-memory-consumption-from-inside-a-process" target="_blanc">РЎ++ РџРѕС‚СЂРµР±Р»РµРЅРёРµ РїР°РјСЏС‚Рё Рј Р¦Рџ РїСЂРёР»РѕР¶РµРЅРёРµРј</a>&emsp;&bull;&ensp;
+<a href="http://doc.crossplatform.ru/" target="_blanc">Qt РґРѕРєСѓРјРµРЅС‚Р°С†РёСЏ</a>&emsp;&bull;&ensp;
 <a href="http://www.cyberforum.ru/qt/thread450074.html#post2511855" target="_blanc">Qt FAQ</a>&emsp;&bull;&ensp;
-<a href="http://www.helloworld.ru/" target="_blanc">HELLOWORLD.RU - документация и книги</a>&emsp;&bull;&ensp;
-<a href="https://www.fast-report.com/documentation/ProgMan-ru/index.html" target="_blanc">FastReport 4.6 Руководство программиста</a>&emsp;&bull;&ensp;
-<a href="https://www.fast-report.com/documentation/UserMan-ru/index.html" target="_blanc">FastReport 4.6 Руководство пользователя</a>&emsp;&bull;&ensp;
+<a href="http://www.helloworld.ru/" target="_blanc">HELLOWORLD.RU - РґРѕРєСѓРјРµРЅС‚Р°С†РёСЏ Рё РєРЅРёРіРё</a>&emsp;&bull;&ensp;
+<a href="https://www.fast-report.com/documentation/ProgMan-ru/index.html" target="_blanc">FastReport 4.6 Р СѓРєРѕРІРѕРґСЃС‚РІРѕ РїСЂРѕРіСЂР°РјРјРёСЃС‚Р°</a>&emsp;&bull;&ensp;
+<a href="https://www.fast-report.com/documentation/UserMan-ru/index.html" target="_blanc">FastReport 4.6 Р СѓРєРѕРІРѕРґСЃС‚РІРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ</a>&emsp;&bull;&ensp;
 </td>
 <tr>
 <th>Java</th>
 <td class="url_cell">
-<a href="https://docs.oracle.com/javase/7/docs/api/overview-summary.html" target="_blanc">Java документация</a>&emsp;&bull;&ensp;
-<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/frame.html" target="_blanc">The Java™ Tutorials</a>&emsp;&bull;&ensp;
+<a href="https://docs.oracle.com/javase/7/docs/api/overview-summary.html" target="_blanc">Java РґРѕРєСѓРјРµРЅС‚Р°С†РёСЏ</a>&emsp;&bull;&ensp;
+<a href="https://docs.oracle.com/javase/tutorial/uiswing/components/frame.html" target="_blanc">The Javaв„ў Tutorials</a>&emsp;&bull;&ensp;
 <a href="http://www.java2s.com/" target="_blanc">Java basic & how to</a>&emsp;&bull;&ensp;
 <a href="http://www.java2s.com/Code/Jar/CatalogJar.htm" target="_blanc">Jar File Download</a>&emsp;&bull;&ensp;
-<a href="https://metanit.com/java/tutorial/1.1.php" target="_blanc">Основы Java - METANIT.COM</a>&emsp;&bull;&ensp;
-<a href="https://math.sgu.ru/sites/chairs/prinf/materials/java/index.htm" target="_blanc">Программирование на языке Java</a>&emsp;&bull;&ensp;
-<a href="http://java-online.ru/index.xhtml" target="_blanc">Java онлайн для разработчиков</a>&emsp;&bull;&ensp;
-<a href="http://java-course.ru/begin/" target="_blanc">Начало Java - Сабуров Антон </a>&emsp;&bull;&ensp;
-<a href="http://khpi-iip.mipk.kharkiv.edu/library/extent/prog/index.html#pgm_java" target="_blanc">Учебники и справочники Java</a>&emsp;&bull;&ensp;
-<a href="http://darkraha.com/rus/java/index.php" target="_blanc">Справочник по java</a>&emsp;&bull;&ensp;
-<a href="http://www.frolov-lib.ru/programming/javasamples/index.html" target="_blanc">Библиотека примеров приложений Java</a>&emsp;&bull;&ensp;
-<a href="http://javastudy.ru/reference/interview/" target="_blanc">Вопросы собеседований по Java с ответами</a>&emsp;&bull;&ensp;
-<a href="https://javadevblog.com/" target="_blanc">Блог JavaDevBlog.com - Программирование на Java и разработка под Android</a>&emsp;&bull;&ensp;
+<a href="https://metanit.com/java/tutorial/1.1.php" target="_blanc">РћСЃРЅРѕРІС‹ Java - METANIT.COM</a>&emsp;&bull;&ensp;
+<a href="https://math.sgu.ru/sites/chairs/prinf/materials/java/index.htm" target="_blanc">РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РЅР° СЏР·С‹РєРµ Java</a>&emsp;&bull;&ensp;
+<a href="http://java-online.ru/index.xhtml" target="_blanc">Java РѕРЅР»Р°Р№РЅ РґР»СЏ СЂР°Р·СЂР°Р±РѕС‚С‡РёРєРѕРІ</a>&emsp;&bull;&ensp;
+<a href="http://java-course.ru/begin/" target="_blanc">РќР°С‡Р°Р»Рѕ Java - РЎР°Р±СѓСЂРѕРІ РђРЅС‚РѕРЅ </a>&emsp;&bull;&ensp;
+<a href="http://khpi-iip.mipk.kharkiv.edu/library/extent/prog/index.html#pgm_java" target="_blanc">РЈС‡РµР±РЅРёРєРё Рё СЃРїСЂР°РІРѕС‡РЅРёРєРё Java</a>&emsp;&bull;&ensp;
+<a href="http://darkraha.com/rus/java/index.php" target="_blanc">РЎРїСЂР°РІРѕС‡РЅРёРє РїРѕ java</a>&emsp;&bull;&ensp;
+<a href="http://www.frolov-lib.ru/programming/javasamples/index.html" target="_blanc">Р‘РёР±Р»РёРѕС‚РµРєР° РїСЂРёРјРµСЂРѕРІ РїСЂРёР»РѕР¶РµРЅРёР№ Java</a>&emsp;&bull;&ensp;
+<a href="http://javastudy.ru/reference/interview/" target="_blanc">Р’РѕРїСЂРѕСЃС‹ СЃРѕР±РµСЃРµРґРѕРІР°РЅРёР№ РїРѕ Java СЃ РѕС‚РІРµС‚Р°РјРё</a>&emsp;&bull;&ensp;
+<a href="https://javadevblog.com/" target="_blanc">Р‘Р»РѕРі JavaDevBlog.com - РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РЅР° Java Рё СЂР°Р·СЂР°Р±РѕС‚РєР° РїРѕРґ Android</a>&emsp;&bull;&ensp;
 <a href="https://soft.mydiv.net/win/download-Android-SDK.html" target="_blanc">Download Android SDK</a>&emsp;&bull;&ensp;
-<a href="https://ru.stackoverflow.com/questions/198329/%d0%a3%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-android-sdk#198330" target="_blanc">Установка Android SDK</a>&emsp;&bull;&ensp;
-<a href="https://developer.android.com/reference/packages" target="_blanc">Android SDK - Справочник по пакетам</a>&emsp;&bull;&ensp;
-<a href="http://developer.alexanderklimov.ru/android/index.php" target="_blanc">Шкодим под Android</a>&emsp;&bull;&ensp;
+<a href="https://ru.stackoverflow.com/questions/198329/%d0%a3%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%b0-android-sdk#198330" target="_blanc">РЈСЃС‚Р°РЅРѕРІРєР° Android SDK</a>&emsp;&bull;&ensp;
+<a href="https://developer.android.com/reference/packages" target="_blanc">Android SDK - РЎРїСЂР°РІРѕС‡РЅРёРє РїРѕ РїР°РєРµС‚Р°Рј</a>&emsp;&bull;&ensp;
+<a href="http://developer.alexanderklimov.ru/android/index.php" target="_blanc">РЁРєРѕРґРёРј РїРѕРґ Android</a>&emsp;&bull;&ensp;
 </td>
 <tr>
 <th>Web</th>
 <td class="url_cell">
 <a href="https://github.com/login" target="_blanc">GitHub</a>&emsp;&bull;&ensp;
-<a href="http://www.postroika.ru/html/content2.html" target="_blanc">Введение в HTML</a>&emsp;&bull;&ensp;
-<a href="http://on-line-teaching.com/html/index.html" target="_blanc">Язык HTML - основы</a>&emsp;&bull;&ensp;
-<a href="https://xsltdev.ru/" target="_blanc">Справочник HTML CSS XSLT XPath</a>&emsp;&bull;&ensp;
+<a href="http://www.postroika.ru/html/content2.html" target="_blanc">Р’РІРµРґРµРЅРёРµ РІ HTML</a>&emsp;&bull;&ensp;
+<a href="http://on-line-teaching.com/html/index.html" target="_blanc">РЇР·С‹Рє HTML - РѕСЃРЅРѕРІС‹</a>&emsp;&bull;&ensp;
+<a href="https://xsltdev.ru/" target="_blanc">РЎРїСЂР°РІРѕС‡РЅРёРє HTML CSS XSLT XPath</a>&emsp;&bull;&ensp;
 <a href="http://htmlbook.ru/" target="_blanc">HTMLbook.ru</a>&emsp;&bull;&ensp;
-<a href="https://msiter.ru/tutorials" target="_blanc">Учебники и самоучители msiter.ru</a>&emsp;&bull;&ensp;
-<a href="https://learn.javascript.ru/" target="_blanc">Современный учебник Javascript</a>&emsp;&bull;&ensp;
-<a href="https://codebra.ru/" target="_blanc">Онлайн-курсы HTML, CSS</a>&emsp;&bull;&ensp;
-<a href="http://jqueryui.com/" target="_blanc">Библиотека jQuery UI</a>&emsp;&bull;&ensp;
-<a href="https://jsfiddle.net/" target="_blanc">Онлайн-редактор HTML CSS JS</a>&emsp;&bull;&ensp;
+<a href="https://msiter.ru/tutorials" target="_blanc">РЈС‡РµР±РЅРёРєРё Рё СЃР°РјРѕСѓС‡РёС‚РµР»Рё msiter.ru</a>&emsp;&bull;&ensp;
+<a href="https://learn.javascript.ru/" target="_blanc">РЎРѕРІСЂРµРјРµРЅРЅС‹Р№ СѓС‡РµР±РЅРёРє Javascript</a>&emsp;&bull;&ensp;
+<a href="https://codebra.ru/" target="_blanc">РћРЅР»Р°Р№РЅ-РєСѓСЂСЃС‹ HTML, CSS</a>&emsp;&bull;&ensp;
+<a href="http://jqueryui.com/" target="_blanc">Р‘РёР±Р»РёРѕС‚РµРєР° jQuery UI</a>&emsp;&bull;&ensp;
+<a href="https://jsfiddle.net/" target="_blanc">РћРЅР»Р°Р№РЅ-СЂРµРґР°РєС‚РѕСЂ HTML CSS JS</a>&emsp;&bull;&ensp;
 <a href="http://htmlsandbox.com/" target="_blanc">HTML SandBox</a>&emsp;&bull;&ensp;
-<a href="https://habr.com/ru/post/38208/" target="_blanc">jQuery для начинающих</a>&emsp;&bull;&ensp;
-<a href="https://users.wix.com/signin?originUrl=https%3A%2F%2Fru.wix.com%2Fmy-account&postLogin=https%3A%2F%2Fru.wix.com%2Fmy-account&overrideLocale=ru" target="_blanc">WIX конструктор сайтов</a>
+<a href="https://habr.com/ru/post/38208/" target="_blanc">jQuery РґР»СЏ РЅР°С‡РёРЅР°СЋС‰РёС…</a>&emsp;&bull;&ensp;
+<a href="https://users.wix.com/signin?originUrl=https%3A%2F%2Fru.wix.com%2Fmy-account&postLogin=https%3A%2F%2Fru.wix.com%2Fmy-account&overrideLocale=ru" target="_blanc">WIX РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃР°Р№С‚РѕРІ</a>
 </td>
 <tr>
-<th>ОС и утилиты</th>
+<th>РћРЎ Рё СѓС‚РёР»РёС‚С‹</th>
 <td class="url_cell">
-<a href="http://heap.altlinux.org/modules/LinuxIntro.george/index.html" target="_blanc">Введение в ОС Linux</a>&emsp;&bull;&ensp;
-<a href="http://cmd4win.ru/stati-i-materialy" target="_blanc">Командная строка Windows</a>&emsp;&bull;&ensp;
-<a href="http://scriptcoding.ru/karta-sayta/" target="_blanc">Сценарии и команды Windows</a>&emsp;&bull;&ensp;
-<a href="http://www.iconarchive.com/" target="_blanc">Архив иконок</a>&emsp;&bull;&ensp;
-<a href="http://icongal.com/browse" target="_blanc">Галерея иконок</a>&emsp;&bull;&ensp;
-<a href="http://2cyr.com/decode/?lang=ru" target="_blanc">Универсальный декодер кириллицы</a>&emsp;&bull;&ensp;
-<a href="http://regex101.com/" target="_blanc">RegExp тестер</a>&emsp;&bull;&ensp;
-<a href="http://www.sbqr.ru/validator/index.html" target="_blanc">Валидатор QR-кода</a>&emsp;&bull;&ensp;
-<a href="http://citforum.ru/programming/shell/index.shtml" target="_blanc">Программирование на Shell</a> 
+<a href="http://heap.altlinux.org/modules/LinuxIntro.george/index.html" target="_blanc">Р’РІРµРґРµРЅРёРµ РІ РћРЎ Linux</a>&emsp;&bull;&ensp;
+<a href="http://cmd4win.ru/stati-i-materialy" target="_blanc">РљРѕРјР°РЅРґРЅР°СЏ СЃС‚СЂРѕРєР° Windows</a>&emsp;&bull;&ensp;
+<a href="http://scriptcoding.ru/karta-sayta/" target="_blanc">РЎС†РµРЅР°СЂРёРё Рё РєРѕРјР°РЅРґС‹ Windows</a>&emsp;&bull;&ensp;
+<a href="http://www.iconarchive.com/" target="_blanc">РђСЂС…РёРІ РёРєРѕРЅРѕРє</a>&emsp;&bull;&ensp;
+<a href="http://icongal.com/browse" target="_blanc">Р“Р°Р»РµСЂРµСЏ РёРєРѕРЅРѕРє</a>&emsp;&bull;&ensp;
+<a href="http://2cyr.com/decode/?lang=ru" target="_blanc">РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№ РґРµРєРѕРґРµСЂ РєРёСЂРёР»Р»РёС†С‹</a>&emsp;&bull;&ensp;
+<a href="http://regex101.com/" target="_blanc">RegExp С‚РµСЃС‚РµСЂ</a>&emsp;&bull;&ensp;
+<a href="http://www.sbqr.ru/validator/index.html" target="_blanc">Р’Р°Р»РёРґР°С‚РѕСЂ QR-РєРѕРґР°</a>&emsp;&bull;&ensp;
+<a href="http://citforum.ru/programming/shell/index.shtml" target="_blanc">РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ РЅР° Shell</a> 
 </td>
 </table>
 </DIV>
@@ -633,45 +633,45 @@ function change_visibility2 (block_4_close, block_4_open) {
 <br>
 <div class="head_div">
 <a name="5" href="javascript:void(0);" onclick="viewdiv('misc_div');" onmouseover="setbackcolor(this,1)" onmouseout="setbackcolor(this,0)">
-Языки
+РЇР·С‹РєРё
 </a>
 </div>
 
 <DIV id="misc_div" class="tab_div">
 <table border="1" cellspacing="0" cellpadding="4" >
 <tr>
-<th>Словари</th>
+<th>РЎР»РѕРІР°СЂРё</th>
 <td class="url_cell">
-<a href="https://www.translate.ru/" target="_blanc">PROMT Онлайн</a>&emsp;&bull;&ensp;
-<a href="http://www.lingvo.ua/ru" target="_blanc">ABBYY Lingvo Англо-Русский</a>&emsp;&bull;&ensp;
-<a href="https://translate.google.ru/#view=home&op=translate&sl=it&tl=ru" target="_blanc">Google переводчик</a>&emsp;&bull;&ensp;
-<a href="https://translate.yandex.ru/translator/Italian-Russian" target="_blanc">Итальянско-русский</a>
+<a href="https://www.translate.ru/" target="_blanc">PROMT РћРЅР»Р°Р№РЅ</a>&emsp;&bull;&ensp;
+<a href="http://www.lingvo.ua/ru" target="_blanc">ABBYY Lingvo РђРЅРіР»Рѕ-Р СѓСЃСЃРєРёР№</a>&emsp;&bull;&ensp;
+<a href="https://translate.google.ru/#view=home&op=translate&sl=it&tl=ru" target="_blanc">Google РїРµСЂРµРІРѕРґС‡РёРє</a>&emsp;&bull;&ensp;
+<a href="https://translate.yandex.ru/translator/Italian-Russian" target="_blanc">РС‚Р°Р»СЊСЏРЅСЃРєРѕ-СЂСѓСЃСЃРєРёР№</a>
 </td>
 </table>
 </DIV>
 
 <div id="r0">
    <br>
-   Какой-то текст.
+   РљР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚.
    <a href="javascript:change_visibility ('r0', 'r1')">
-      Читать далее»
+      Р§РёС‚Р°С‚СЊ РґР°Р»РµРµВ»
    </a>
 </div>
 <div id="r1" style="display:none">
     <br>
-    Какой-то текст.<br>
-    И продолжение текста
+    РљР°РєРѕР№-С‚Рѕ С‚РµРєСЃС‚.<br>
+    Р РїСЂРѕРґРѕР»Р¶РµРЅРёРµ С‚РµРєСЃС‚Р°
     <a href="#" onClick="change_visibility ('r1', 'r0')">
-       «Скрыть взад
+       В«РЎРєСЂС‹С‚СЊ РІР·Р°Рґ
     </a>
 </div>
 
 <script>
-//ЦВЕТА ГИПЕРССЫЛОК
+//Р¦Р’Р•РўРђ Р“РРџР•Р РЎРЎР«Р›РћРљ
 document.linkColor = 'green';
 document.vlinkColor = 'green';
 
-//УСТАНОВКА ТЕКУЩЕЙ ДАТЫ И ВРЕМЕНИ
+//РЈРЎРўРђРќРћР’РљРђ РўР•РљРЈР©Р•Р™ Р”РђРўР« Р Р’Р Р•РњР•РќР
 function refreshDateTime() { 
   document.getElementById('datetime').innerHTML = renderDate('HTML'); 
   setTimeout(refreshDateTime, 60000); 
@@ -679,23 +679,23 @@ function refreshDateTime() {
 refreshDateTime();
 document.getElementById('search_bar').focus();
 
-// ОТОБРАЖЕНИЕ ФОРМЫ КАЛЬКУЛЯТОРА
+// РћРўРћР‘Р РђР–Р•РќРР• Р¤РћР РњР« РљРђР›Р¬РљРЈР›РЇРўРћР Рђ
 function openCalcForm(){
   var el=document.getElementById('calculator_block');
   el.style.display="block";
   document.getElementById('exprToCalc').focus();
 }  
-// ВВОД В КАЛЬКУЛЯТОРЕ
+// Р’Р’РћР” Р’ РљРђР›Р¬РљРЈР›РЇРўРћР Р•
 function addVal(val){
   document.getElementById('exprToCalc').value+=val;
   document.getElementById('exprToCalc').focus();
 }
-//ВЫЧИСЛЕНИЕ В КАЛЬКУЛЯТОРЕ - операция
+//Р’Р«Р§РРЎР›Р•РќРР• Р’ РљРђР›Р¬РљРЈР›РЇРўРћР Р• - РѕРїРµСЂР°С†РёСЏ
 function calcOper(oper){
-  if (document.getElementById('argToCalc').value==''){ //Первая операция
-    document.getElementById('argToCalc').value = document.getElementById('exprToCalc').value;  //Перенос введенного значения в аргумент
+  if (document.getElementById('argToCalc').value==''){ //РџРµСЂРІР°СЏ РѕРїРµСЂР°С†РёСЏ
+    document.getElementById('argToCalc').value = document.getElementById('exprToCalc').value;  //РџРµСЂРµРЅРѕСЃ РІРІРµРґРµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РІ Р°СЂРіСѓРјРµРЅС‚
   }
-  else{ // Очередная операция
+  else{ // РћС‡РµСЂРµРґРЅР°СЏ РѕРїРµСЂР°С†РёСЏ
     if (document.getElementById('operToCalc').value=='')
       document.getElementById('argToCalc').value = document.getElementById('exprToCalc').value;
     else{
@@ -705,17 +705,17 @@ function calcOper(oper){
           break;
         }
         default :
-          document.getElementById('argToCalc').value = eval(document.getElementById('argToCalc').value+document.getElementById('operToCalc').value + document.getElementById('exprToCalc').value); // Вычисление результата операции аргумента с введенным значением
+          document.getElementById('argToCalc').value = eval(document.getElementById('argToCalc').value+document.getElementById('operToCalc').value + document.getElementById('exprToCalc').value); // Р’С‹С‡РёСЃР»РµРЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° РѕРїРµСЂР°С†РёРё Р°СЂРіСѓРјРµРЅС‚Р° СЃ РІРІРµРґРµРЅРЅС‹Рј Р·РЅР°С‡РµРЅРёРµРј
       }
     }  
  } 
- document.getElementById('operToCalc').value = oper; // Запись операции
- document.getElementById('exprToCalc').value = ''; // Сброс введенного значения
+ document.getElementById('operToCalc').value = oper; // Р—Р°РїРёСЃСЊ РѕРїРµСЂР°С†РёРё
+ document.getElementById('exprToCalc').value = ''; // РЎР±СЂРѕСЃ РІРІРµРґРµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ
  document.getElementById('exprToCalc').focus();
 }
-//ВЫЧИСЛЕНИЕ В КАЛЬКУЛЯТОРЕ - функция
+//Р’Р«Р§РРЎР›Р•РќРР• Р’ РљРђР›Р¬РљРЈР›РЇРўРћР Р• - С„СѓРЅРєС†РёСЏ
 function calcFunc(oper){
- if (oper.charCodeAt(0)==8730) //&radic; Вычисление квадратного корня
+ if (oper.charCodeAt(0)==8730) //&radic; Р’С‹С‡РёСЃР»РµРЅРёРµ РєРІР°РґСЂР°С‚РЅРѕРіРѕ РєРѕСЂРЅСЏ
    document.getElementById('exprToCalc').value = eval('Math.sqrt('+document.getElementById('exprToCalc').value+')');
  else {
    if (oper.charCodeAt(0)==177) // +-
@@ -727,25 +727,25 @@ function calcFunc(oper){
  }
  if(oper=='='){
    calcOper('');
-   document.getElementById('operToCalc').value = ''; // Сброс операции
-   document.getElementById('exprToCalc').value = document.getElementById('argToCalc').value; // Перенос вычисленного значения
-   document.getElementById('argToCalc').value = '';// Сброс аргумента
+   document.getElementById('operToCalc').value = ''; // РЎР±СЂРѕСЃ РѕРїРµСЂР°С†РёРё
+   document.getElementById('exprToCalc').value = document.getElementById('argToCalc').value; // РџРµСЂРµРЅРѕСЃ РІС‹С‡РёСЃР»РµРЅРЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ
+   document.getElementById('argToCalc').value = '';// РЎР±СЂРѕСЃ Р°СЂРіСѓРјРµРЅС‚Р°
  }  
  document.getElementById('exprToCalc').focus();
 }  
-//СБРОС В КАЛЬКУЛЯТОРЕ
+//РЎР‘Р РћРЎ Р’ РљРђР›Р¬РљРЈР›РЇРўРћР Р•
 function clearCalc(){ 
  document.getElementById('argToCalc').value = '';
  document.getElementById('exprToCalc').value = '';
  document.getElementById('operToCalc').value = '';
  document.getElementById('exprToCalc').focus();
 }
-// НАЖАТИЕ КЛАВИШИ В КАЛЬКУЛЯТОРЕ  
-function handleKeyDown(code){ // code - код клавиши а не символа!
+// РќРђР–РђРўРР• РљР›РђР’РРЁР Р’ РљРђР›Р¬РљРЈР›РЇРўРћР Р•  
+function handleKeyDown(code){ // code - РєРѕРґ РєР»Р°РІРёС€Рё Р° РЅРµ СЃРёРјРІРѕР»Р°!
   var ch;
   if(code==13) //Enter
     calcFunc('=');
-  else if(code==106 || code==107 || code==109 || code==111){ // нажатие клавиш * + - / на Num Pad
+  else if(code==106 || code==107 || code==109 || code==111){ // РЅР°Р¶Р°С‚РёРµ РєР»Р°РІРёС€ * + - / РЅР° Num Pad
     switch(code){
       case 106:{ ch = '*'; break;}
       case 107:{ ch = '+'; break;}
@@ -761,7 +761,7 @@ function handleKeyDown(code){ // code - код клавиши а не символа!
   else if(code==27) //Escape
     document.getElementById('calculator_block').style.display = 'none';
   //else  
-    //alert(code);// code - код клавиши а не символа!
+    //alert(code);// code - РєРѕРґ РєР»Р°РІРёС€Рё Р° РЅРµ СЃРёРјРІРѕР»Р°!
   
 }
 
